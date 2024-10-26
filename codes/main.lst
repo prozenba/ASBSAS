@@ -1,0 +1,125 @@
+                                                                                                                                                                                                                                 23:11 Sunday, April 7, 2024   1
+
+ 
+ 
+Obs                      Method
+
+ 1  FORWARD SLSTAY=0.45 SLENTRY=0.45 START=0 STOP=70
+
+ 
+ 
+Obs                                                                                                                            Model
+
+ 1  WOE_ACT12_N_ARREARS WOE_ACT12_N_ARREARS_DAYS WOE_ACT3_N_ARREARS_DAYS WOE_ACT6_N_ARREARS WOE_ACT9_N_ARREARS WOE_ACT_AGE WOE_ACT_CALL_CC WOE_ACT_CC WOE_ACT_CCSS_CC WOE_ACT_CCSS_DUEUTL WOE_ACT_CCSS_MAXDUE WOE_ACT_CCSS_MIN_LNINST WOE_ACT_CCSS_MIN_SENIORITY
+
+                                       Min_      Max_                                  Max_Con_
+                                       Wald      Prob      Max_VIF_    Max_Pearson_     Index_     n_beta_
+Obs N_Var    AR_Train    AR_Valid     ChiSq      ChiSq       Train         Train         Train      minus
+
+ 1    28      0.72363     0.68557    0.69841    0.4033      3625.52       0.99986       230.312       8   
+                                                                                                                                                                                                                                 23:11 Sunday, April 7, 2024   2
+
+                                                                                                                     The LOGISTIC Procedure
+
+                                                                                                                       Model Information
+
+                                                                                                         Data Set                      ABT.TRAIN_WOE   
+                                                                                                         Response Variable             default12       
+                                                                                                         Number of Response Levels     2               
+                                                                                                         Model                         binary logit    
+                                                                                                         Optimization Technique        Fisher's scoring
+
+
+                                                                                                            Number of Observations Read        3389
+                                                                                                            Number of Observations Used        2931
+
+
+                                                                                                                        Response Profile
+ 
+                                                                                                               Ordered                       Total
+                                                                                                                 Value     default12     Frequency
+
+                                                                                                                     1            1           1447
+                                                                                                                     2            0           1484
+                                                                                                                                  I              .
+
+                                                                                                              Probability modeled is default12=1.
+
+NOTE: 458 observations were deleted due to missing values for the response or explanatory variables.
+
+NOTE: 1 response level was deleted due to missing or invalid values for its explanatory, frequency, or weight variables.
+
+
+                                                                                                                    Model Convergence Status
+
+                                                                                                         Convergence criterion (GCONV=1E-8) satisfied.          
+
+
+                                                                                                                      Model Fit Statistics
+ 
+                                                                                                                                          Intercept
+                                                                                                                           Intercept            and
+                                                                                                             Criterion          Only     Covariates
+
+                                                                                                             AIC            4064.762       2834.403
+                                                                                                             SC             4070.745       2888.251
+                                                                                                             -2 Log L       4062.762       2816.403
+
+
+                                                                                                                                                                                                                                 23:11 Sunday, April 7, 2024   3
+
+                                                                                                                     The LOGISTIC Procedure
+
+                                                                                                            Testing Global Null Hypothesis: BETA=0
+ 
+                                                                                                    Test                 Chi-Square       DF     Pr > ChiSq
+
+                                                                                                    Likelihood Ratio      1246.3588        8         <.0001
+                                                                                                    Score                 1044.4043        8         <.0001
+                                                                                                    Wald                   725.2052        8         <.0001
+
+
+                                                                                                           Analysis of Maximum Likelihood Estimates
+ 
+                                                                                                                                    Standard          Wald
+                                                                                       Parameter                  DF    Estimate       Error    Chi-Square    Pr > ChiSq
+
+                                                                                       Intercept                   1      0.0966      0.0478        4.0855        0.0433
+                                                                                       WOE_ACT9_N_ARREARS          1      0.5605      0.0603       86.5050        <.0001
+                                                                                       WOE_ACT_CC                  1      1.0250      0.1831       31.3270        <.0001
+                                                                                       WOE_ACT_CCSS_DUEUTL         1      0.6025      0.0563      114.4012        <.0001
+                                                                                       WOE_ACT_CCSS_MIN_LNINST     1      0.4257      0.0752       32.0378        <.0001
+                                                                                       WOE_ACT_CCSS_N_STATC        1      0.5933      0.0761       60.7164        <.0001
+                                                                                       WOE_APP_CHAR_JOB_CODE       1      1.1904      0.1787       44.3594        <.0001
+                                                                                       WOE_APP_IGJM                1      0.8311      0.1673       24.6717        <.0001
+                                                                                       WOE_APP_INCOME              1      0.6216      0.1851       11.2819        0.0008
+
+
+                                                                                                                     Odds Ratio Estimates
+                                                                                                                               
+                                                                                                                                Point          95% Wald
+                                                                                                  Effect                     Estimate      Confidence Limits
+
+                                                                                                  WOE_ACT9_N_ARREARS            1.752       1.556       1.971
+                                                                                                  WOE_ACT_CC                    2.787       1.947       3.991
+                                                                                                  WOE_ACT_CCSS_DUEUTL           1.827       1.636       2.040
+                                                                                                  WOE_ACT_CCSS_MIN_LNINST       1.531       1.321       1.774
+                                                                                                  WOE_ACT_CCSS_N_STATC          1.810       1.559       2.101
+                                                                                                  WOE_APP_CHAR_JOB_CODE         3.289       2.317       4.668
+                                                                                                  WOE_APP_IGJM                  2.296       1.654       3.187
+                                                                                                  WOE_APP_INCOME                1.862       1.295       2.676
+
+
+                                                                                                 Association of Predicted Probabilities and Observed Responses
+
+                                                                                                      Percent Concordant       84.6    Somers' D    0.693
+                                                                                                      Percent Discordant       15.3    Gamma        0.694
+                                                                                                      Percent Tied              0.2    Tau-a        0.347
+                                                                                                      Pairs                 2147348    c            0.847
+                                                                                                                                                                                                                                 23:11 Sunday, April 7, 2024   4
+
+                                                                                                                                                                                     Min_      Max_                                  Max_Con_
+                                                                                                                                                                                     Wald      Prob      Max_VIF_    Max_Pearson_     Index_     n_beta_
+        Obs    Method                                                            Model                                                            N_Var    AR_Train    AR_Valid     ChiSq      ChiSq       Train         Train         Train      minus
+
+         1     Expert    WOE_ACT12_N_ARREARS WOE_ACT_CC WOE_ACT_CCSS_DUEUTL WOE_ACT_CCSS_MIN_LNINST WOE_ACT_CCSS_N_STATC WOE_APP_CHAR_JOB_CODE      6       0.68061     0.64164    3.47342    0.0624      1.77947       0.58744       2.37181       0   
