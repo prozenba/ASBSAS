@@ -7,13 +7,13 @@
 
 goptions reset=all;
 %let title=Example of quick and dirty model;
-%let dir_codes=c:\karol\oferta_zajec\CS-AUT\software\ASB_SAS\monitoring\;
+%let dir_codes=/export/viya/homes/piotr.rozenbajgier@sgh.waw.pl/CS/monitoring/;
 
 %let time_dim=Year;
 %include "&dir_codes.makra.sas";
 %include "&dir_codes.makra_am.sas";
 
-libname inlib "&dir_codes.data\" compress=yes;
+libname inlib "&dir_codes.data/" compress=yes;
 
 %let dir_index=&dir_codes;
 %let dir=&dir_index.reports\;
@@ -182,7 +182,7 @@ run;
 data logo;
 	set logo;
 	total=
-		'<a href="'||"reports\"||compress(total)||"_index_main.html"||'">'||trim(total)||'</a>'
+		'<a href="'||"reports/"||compress(total)||"_index_main.html"||'">'||trim(total)||'</a>'
 	;
 run;
 
