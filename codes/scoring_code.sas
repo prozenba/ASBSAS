@@ -9,8 +9,8 @@
 
 %let kat_kodowanie=%sysfunc(pathname(&lib.));
 
-/*na razie missing wrzucamy wed³ug porz¹dku 
-zale¿nie od tego czy to jest model ryzyka czy response*/
+/*na razie missing wrzucamy wedÂ³ug porzÂ¹dku 
+zaleÂ¿nie od tego czy to jest model ryzyka czy response*/
 data scorecard;
 set models.Scorecard_Scorecard&the_best_model(
 rename=(_variable_=variable _label_=condition));
@@ -29,7 +29,7 @@ quit;
 /*teraz prawdziwe skorowanie*/
 
 
-filename kod "&kat_kodowanie.\scoring_code.sas";
+filename kod "&kat_kodowanie./scoring_code.sas";
 data _null_;
 length przed za $100 naz $300;
 file kod;
