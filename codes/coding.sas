@@ -298,6 +298,6 @@ run;
 
 %let zbior=&zb_v;
 %let keep=_all_;
-%include "&kat_kodowanie.\coding_code.sas";
+%include "&kat_kodowanie./coding_code.sas";
 
 
