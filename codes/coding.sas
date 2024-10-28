@@ -38,8 +38,8 @@ by variable grp;
 run;
 
 /*kodowanie*/
-/*od nowa siê liczy iloœci w atrybutach*/
-/*zaklada siê ¿e mo¿na te conditionunki modyfikowaæ*/
+/*od nowa siÃª liczy iloÅ“ci w atrybutach*/
+/*zaklada siÃª Â¿e moÂ¿na te conditionunki modyfikowaÃ¦*/
 
 /*libname t (&lib.);*/
 %let kat_kodowanie=%sysfunc(pathname(&lib.));
@@ -100,8 +100,8 @@ end;
 run;
 
 
-filename kod "&kat_kodowanie.\coding_code_tmp.sas";
-/*potrzebujemy policzyæ n_cat n_bads_cat*/
+filename kod "&kat_kodowanie./coding_code_tmp.sas";
+/*potrzebujemy policzyÃ¦ n_cat n_bads_cat*/
 data _null_;
 length przed za $100 naz $32;
 file kod;
@@ -140,7 +140,7 @@ end;
 put "run;";
 run;
 
-%include "&kat_kodowanie.\coding_code_tmp.sas";
+%include "&kat_kodowanie./coding_code_tmp.sas";
 
 proc means data=grp noprint;
 class grp: /missing;
@@ -206,7 +206,7 @@ if .<br<0.0003 then br=0.0003;
 
 logit=log(n_bads_cat/n_goods_cat);
 /*logit=log(br/(1-br));*/
-/*liczê woe jako logit*/
+/*liczÃª woe jako logit*/
 transformed=logit;
 Percent=n_cat/&n;
 Percent_bads=coalesce(n_bads_cat/&n_bads,0);
@@ -233,8 +233,8 @@ grp+1;
 otherwise_ind=(condition='otherwise');
 run;
 
-/*na razie missing wrzucamy wed³ug porz¹dku 
-zale¿nie od tego czy to jest model ryzyka czy response*/
+/*na razie missing wrzucamy wedÂ³ug porzÂ¹dku 
+zaleÂ¿nie od tego czy to jest model ryzyka czy response*/
 
 proc sort data=&lib..scorecard_all out=p;
 by variable otherwise_ind &order_tar br;
@@ -244,7 +244,7 @@ run;
 /*teraz prawdziwe kodowanie*/
 
 
-filename kod "&kat_kodowanie.\coding_code.sas";
+filename kod "&kat_kodowanie./coding_code.sas";
 data _null_;
 length przed za $100 naz $32;
 file kod;
@@ -294,7 +294,7 @@ run;
 
 %let zbior=&zb;
 %let keep=_all_;
-%include "&kat_kodowanie.\coding_code.sas";
+%include "&kat_kodowanie./coding_code.sas";
 
 %let zbior=&zb_v;
 %let keep=_all_;
