@@ -1,0 +1,293 @@
+1                                        The SAS System               23:53 Sunday, April 7, 2024
+
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS1M5) 
+      Licensed to SGH EAS WX6, Site 70110891.
+NOTE: This session is executing on the X64_10PRO  platform.
+
+
+
+NOTE: Updated analytical products:
+      
+      SAS/STAT 14.3
+      SAS/ETS 14.3
+      SAS/OR 14.3
+      SAS/IML 14.3
+      SAS/QC 14.3
+
+NOTE: Additional host information:
+
+ X64_10PRO WIN 10.0.19041  Workstation
+
+NOTE: SAS initialization used:
+      real time           0.50 seconds
+      cpu time            0.29 seconds
+      
+1          /*******************************************************/
+2          /*  (c) Karol Przanowski                               */
+3          /*      kprzan@sgh.waw.pl                              */
+4          /*  (c) Karol Przanowski - Advanced Analytical Support */
+5          /*      kprzan@interia.pl                              */
+6          /*******************************************************/
+7          
+8          
+9          
+10         
+11         libname inlib "c:\karol\oferta_zajec\CS-AUT\software\ASB_SAS\\inlib\" compress=yes;
+NOTE: Libref INLIB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: c:\karol\oferta_zajec\CS-AUT\software\ASB_SAS\\inlib
+12         libname out "c:\karol\oferta_zajec\CS-AUT\software\ASB_SAS\monitoring\data\"
+12       ! compress=yes;
+NOTE: Libref OUT was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: c:\karol\oferta_zajec\CS-AUT\software\ASB_SAS\monitoring\data
+13         
+14         
+15         %let dir_codes=%sysfunc(pathname(out));
+16         
+17         proc sql noprint;
+18         select distinct _variable_,'GRP_'||trim(_variable_)
+19         into :zmienne separated by ' ',
+20         :zmienne_grp separated by ' '
+21         from out.Scorecard_scorecard1;
+22         quit;
+NOTE: PROCEDURE SQL used (Total process time):
+2                                        The SAS System               23:53 Sunday, April 7, 2024
+
+      real time           0.04 seconds
+      cpu time            0.03 seconds
+      
+
+23         %put &zmienne;
+ACT12_N_ARREARS ACT_CC ACT_CCSS_DUEUTL ACT_CCSS_MIN_LNINST ACT_CCSS_N_STATC APP_CHAR_JOB_CODE
+24         %put &zmienne_grp;
+GRP_ACT12_N_ARREARS GRP_ACT_CC GRP_ACT_CCSS_DUEUTL GRP_ACT_CCSS_MIN_LNINST GRP_ACT_CCSS_N_STATC 
+GRP_APP_CHAR_JOB_CODE
+25         
+26         /*proc sql noprint;*/
+27         /*select 'inlib.'||memname into :sets separated by " " */
+28         /*from dictionary.tables where*/
+29         /*libname=upcase("INLIB") and memname like "ABT_%"; */
+30         /*quit; */
+31         %let in_abt=inlib.abt_app;
+32         %let sets=&in_abt;
+33         %put &sets;
+inlib.abt_app
+34         
+35         
+36         %macro Additional_variables;
+37         length app_IGJM $ 30;
+38         outstanding=app_loan_amount;
+39         credit_limit=app_loan_amount;
+40         app_IGJM = trim(app_char_gender)||'-'||trim(app_char_job_code)||
+41         	'-'||trim(app_char_marital_status);
+42         where '197501'<=period<='198712' and product='css' and decision='A';
+43         %mend;
+44         
+45         
+46         data out.abt;
+47         	set &sets;
+48         	if _error_ then _error_=0;
+49         	%Additional_variables;
+50         	keep &zmienne default: outstanding: credit_limit cross_response
+51         	period ;
+52         run;
+
+NOTE: There were 11437 observations read from the data set INLIB.ABT_APP.
+      WHERE (period>='197501' and period<='198712') and (product='css') and (decision='A');
+NOTE: The data set OUT.ABT has 11437 observations and 18 variables.
+NOTE: Compressing data set OUT.ABT decreased size by 40.74 percent. 
+      Compressed is 16 pages; un-compressed would require 27 pages.
+NOTE: DATA statement used (Total process time):
+      real time           0.07 seconds
+      cpu time            0.06 seconds
+      
+
+53         
+54         
+55         %let zbior=out.abt;
+56         %include "&dir_codes.\scoring_code.sas" / source2;
+3                                        The SAS System               23:53 Sunday, April 7, 2024
+
+NOTE: %INCLUDE (level 1) file 
+      c:\karol\oferta_zajec\CS-AUT\software\ASB_SAS\monitoring\data\scoring_code.sas is file 
+      c:\karol\oferta_zajec\CS-AUT\software\ASB_SAS\monitoring\data\scoring_code.sas.
+57        +data &zbior._score;
+58        +set &zbior;
+59        +SCORECARD_POINTS = 0;
+60        +select;
+61        +when ( not missing(ACT12_N_ARREARS) and ACT12_N_ARREARS <= 0 ) do;
+62        +SCORECARD_POINTS=sum(SCORECARD_POINTS,59);
+63        +PSC_ACT12_N_ARREARS=59;
+64        +end;
+65        +when ( 0 < ACT12_N_ARREARS <= 1 ) do;
+66        +SCORECARD_POINTS=sum(SCORECARD_POINTS,55);
+67        +PSC_ACT12_N_ARREARS=55;
+68        +end;
+69        +when ( 1 < ACT12_N_ARREARS <= 4 ) do;
+70        +SCORECARD_POINTS=sum(SCORECARD_POINTS,45);
+71        +PSC_ACT12_N_ARREARS=45;
+72        +end;
+73        +when ( 4 < ACT12_N_ARREARS <= 8 ) do;
+74        +SCORECARD_POINTS=sum(SCORECARD_POINTS,31);
+75        +PSC_ACT12_N_ARREARS=31;
+76        +end;
+77        +when ( 8 < ACT12_N_ARREARS <= 10 ) do;
+78        +SCORECARD_POINTS=sum(SCORECARD_POINTS,21);
+79        +PSC_ACT12_N_ARREARS=21;
+80        +end;
+81        +when ( 10 < ACT12_N_ARREARS ) do;
+82        +SCORECARD_POINTS=sum(SCORECARD_POINTS,8);
+83        +PSC_ACT12_N_ARREARS=8;
+84        +end;
+85        +otherwise do;
+86        +SCORECARD_POINTS=sum(SCORECARD_POINTS,8);
+87        +PSC_ACT12_N_ARREARS=8;
+88        +end; end;
+89        +select;
+90        +when ( not missing(ACT_CC) and ACT_CC <= 0.5710914454 ) do;
+91        +SCORECARD_POINTS=sum(SCORECARD_POINTS,61);
+92        +PSC_ACT_CC=61;
+93        +end;
+94        +when ( 0.5710914454 < ACT_CC <= 0.823943662 ) do;
+95        +SCORECARD_POINTS=sum(SCORECARD_POINTS,48);
+96        +PSC_ACT_CC=48;
+97        +end;
+98        +when ( 0.8799149841 < ACT_CC ) do;
+99        +SCORECARD_POINTS=sum(SCORECARD_POINTS,22);
+100       +PSC_ACT_CC=22;
+101       +end;
+102       +when ( 0.823943662 < ACT_CC <= 0.8799149841 ) do;
+103       +SCORECARD_POINTS=sum(SCORECARD_POINTS,8);
+104       +PSC_ACT_CC=8;
+105       +end;
+106       +otherwise do;
+4                                        The SAS System               23:53 Sunday, April 7, 2024
+
+107       +SCORECARD_POINTS=sum(SCORECARD_POINTS,8);
+108       +PSC_ACT_CC=8;
+109       +end; end;
+110       +select;
+111       +when ( not missing(ACT_CCSS_DUEUTL) and ACT_CCSS_DUEUTL <= 0.0083333333 ) do;
+112       +SCORECARD_POINTS=sum(SCORECARD_POINTS,70);
+113       +PSC_ACT_CCSS_DUEUTL=70;
+114       +end;
+115       +when ( missing(ACT_CCSS_DUEUTL) ) do;
+116       +SCORECARD_POINTS=sum(SCORECARD_POINTS,70);
+117       +PSC_ACT_CCSS_DUEUTL=70;
+118       +end;
+119       +when ( 0.0083333333 < ACT_CCSS_DUEUTL <= 0.0208333333 ) do;
+120       +SCORECARD_POINTS=sum(SCORECARD_POINTS,48);
+121       +PSC_ACT_CCSS_DUEUTL=48;
+122       +end;
+123       +when ( 0.0208333333 < ACT_CCSS_DUEUTL <= 0.0416666667 ) do;
+124       +SCORECARD_POINTS=sum(SCORECARD_POINTS,30);
+125       +PSC_ACT_CCSS_DUEUTL=30;
+126       +end;
+127       +when ( 0.0416666667 < ACT_CCSS_DUEUTL ) do;
+128       +SCORECARD_POINTS=sum(SCORECARD_POINTS,8);
+129       +PSC_ACT_CCSS_DUEUTL=8;
+130       +end;
+131       +otherwise do;
+132       +SCORECARD_POINTS=sum(SCORECARD_POINTS,8);
+133       +PSC_ACT_CCSS_DUEUTL=8;
+134       +end; end;
+135       +select;
+136       +when ( not missing(ACT_CCSS_MIN_LNINST) and ACT_CCSS_MIN_LNINST <= 1 ) do;
+137       +SCORECARD_POINTS=sum(SCORECARD_POINTS,32);
+138       +PSC_ACT_CCSS_MIN_LNINST=32;
+139       +end;
+140       +when ( missing(ACT_CCSS_MIN_LNINST) ) do;
+141       +SCORECARD_POINTS=sum(SCORECARD_POINTS,30);
+142       +PSC_ACT_CCSS_MIN_LNINST=30;
+143       +end;
+144       +when ( 11 < ACT_CCSS_MIN_LNINST <= 18 ) do;
+145       +SCORECARD_POINTS=sum(SCORECARD_POINTS,21);
+146       +PSC_ACT_CCSS_MIN_LNINST=21;
+147       +end;
+148       +when ( 1 < ACT_CCSS_MIN_LNINST <= 3 ) do;
+149       +SCORECARD_POINTS=sum(SCORECARD_POINTS,17);
+150       +PSC_ACT_CCSS_MIN_LNINST=17;
+151       +end;
+152       +when ( 3 < ACT_CCSS_MIN_LNINST <= 11 ) do;
+153       +SCORECARD_POINTS=sum(SCORECARD_POINTS,13);
+154       +PSC_ACT_CCSS_MIN_LNINST=13;
+155       +end;
+156       +when ( 18 < ACT_CCSS_MIN_LNINST ) do;
+157       +SCORECARD_POINTS=sum(SCORECARD_POINTS,8);
+158       +PSC_ACT_CCSS_MIN_LNINST=8;
+159       +end;
+5                                        The SAS System               23:53 Sunday, April 7, 2024
+
+160       +otherwise do;
+161       +SCORECARD_POINTS=sum(SCORECARD_POINTS,8);
+162       +PSC_ACT_CCSS_MIN_LNINST=8;
+163       +end; end;
+164       +select;
+165       +when ( 21 < ACT_CCSS_N_STATC ) do;
+166       +SCORECARD_POINTS=sum(SCORECARD_POINTS,79);
+167       +PSC_ACT_CCSS_N_STATC=79;
+168       +end;
+169       +when ( 11 < ACT_CCSS_N_STATC <= 21 ) do;
+170       +SCORECARD_POINTS=sum(SCORECARD_POINTS,56);
+171       +PSC_ACT_CCSS_N_STATC=56;
+172       +end;
+173       +when ( missing(ACT_CCSS_N_STATC) ) do;
+174       +SCORECARD_POINTS=sum(SCORECARD_POINTS,27);
+175       +PSC_ACT_CCSS_N_STATC=27;
+176       +end;
+177       +when ( not missing(ACT_CCSS_N_STATC) and ACT_CCSS_N_STATC <= 11 ) do;
+178       +SCORECARD_POINTS=sum(SCORECARD_POINTS,8);
+179       +PSC_ACT_CCSS_N_STATC=8;
+180       +end;
+181       +otherwise do;
+182       +SCORECARD_POINTS=sum(SCORECARD_POINTS,8);
+183       +PSC_ACT_CCSS_N_STATC=8;
+184       +end; end;
+185       +select (APP_CHAR_JOB_CODE );
+186       +  when ('Retired')   do;
+187       +SCORECARD_POINTS=sum(SCORECARD_POINTS,115);
+188       +PSC_APP_CHAR_JOB_CODE=115;
+189       +end;
+190       +  when ('Permanent')   do;
+191       +SCORECARD_POINTS=sum(SCORECARD_POINTS,113);
+192       +PSC_APP_CHAR_JOB_CODE=113;
+193       +end;
+194       +  when ('Owner company')   do;
+195       +SCORECARD_POINTS=sum(SCORECARD_POINTS,88);
+196       +PSC_APP_CHAR_JOB_CODE=88;
+197       +end;
+198       +otherwise do;
+199       +SCORECARD_POINTS=sum(SCORECARD_POINTS,8);
+200       +PSC_APP_CHAR_JOB_CODE=8;
+201       +end; end;
+202       +run;
+
+NOTE: There were 11437 observations read from the data set OUT.ABT.
+NOTE: The data set OUT.ABT_SCORE has 11437 observations and 25 variables.
+NOTE: Compressing data set OUT.ABT_SCORE decreased size by 40.54 percent. 
+      Compressed is 22 pages; un-compressed would require 37 pages.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+6                                        The SAS System               23:53 Sunday, April 7, 2024
+
+NOTE: %INCLUDE (level 1) ending.
+203        
+204        proc delete data=out.abt;
+205        run;
+
+NOTE: Deleting OUT.ABT (memtype=DATA).
+NOTE: PROCEDURE DELETE used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           0.73 seconds
+      cpu time            0.46 seconds
+      
