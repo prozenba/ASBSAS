@@ -1,0 +1,4184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-type" content="text/html; charset=windows-1250">
+<title>SAS Output</title>
+<style type="text/css">
+<!--
+.aftercaption
+{
+  background-color: #D8DBD3;
+  border-spacing: 0px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+  padding-top: 4pt;
+}
+.batch
+{
+  background-color: #D8DBD3;
+  border: 1px solid #C1C1C1;
+  border-collapse: separate;
+  border-spacing: 1px;
+  color: #000000;
+  font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  padding: 7px;
+}
+.beforecaption
+{
+  background-color: #D8DBD3;
+  border-spacing: 0px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.body
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.bodydate
+{
+  background-color: #D8DBD3;
+  border-spacing: 0px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  text-align: right;
+  vertical-align: top;
+  width: 100%;
+}
+.bycontentfolder
+{
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.byline
+{
+  background-color: #D8DBD3;
+  border-spacing: 0px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.bylinecontainer
+{
+  background-color: #D8DBD3;
+  border: 0px solid #000000;
+  border-spacing: 1px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.caption
+{
+  background-color: #D8DBD3;
+  border-spacing: 0px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.cell
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.container
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.contentfolder
+{
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.contentitem
+{
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.contentproclabel
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.contentprocname
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.contents
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.contentsdate
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.contenttitle
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.continued
+{
+  background-color: #D8DBD3;
+  border-spacing: 0px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+  width: 100%;
+}
+.data
+{
+  background-color: #FFFFFF;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.dataemphasis
+{
+  background-color: #FFFFFF;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.dataemphasisfixed
+{
+  background-color: #FFFFFF;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.dataempty
+{
+  background-color: #FFFFFF;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.datafixed
+{
+  background-color: #FFFFFF;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: 'Courier New', Courier;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.datastrong
+{
+  background-color: #FFFFFF;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.datastrongfixed
+{
+  background-color: #FFFFFF;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.date
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.document
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+a:link {
+color:#0000FF
+}
+a:visited {
+color:#800080
+}
+a:active {
+color:#800080
+}
+.errorbanner
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.errorcontent
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.errorcontentfixed
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: 'Courier New', Courier;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.extendedpage
+{
+  background-color: #D8DBD3;
+  border: 1pt solid #000000;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+}
+.fatalbanner
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.fatalcontent
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.fatalcontentfixed
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: 'Courier New', Courier;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.folderaction
+{
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.footer
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.footeremphasis
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.footeremphasisfixed
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.footerempty
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.footerfixed
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: 'Courier New', Courier;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.footerstrong
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.footerstrongfixed
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.frame
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.graph
+{
+  background-color: #D8DBD3;
+  border: 1px solid #C1C1C1;
+  border-collapse: separate;
+  border-spacing: 1px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.header
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headeremphasis
+{
+  background-color: #D8DBD3;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.headeremphasisfixed
+{
+  background-color: #D8DBD3;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.headerempty
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headerfixed
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: 'Courier New', Courier;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.headersandfooters
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headerstrong
+{
+  background-color: #D8DBD3;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headerstrongfixed
+{
+  background-color: #D8DBD3;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.heading1
+{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.heading2
+{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.heading3
+{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.heading4
+{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.heading5
+{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.heading6
+{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.index
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.indexaction
+{
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.indexitem
+{
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.indexprocname
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.indextitle
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.layoutcontainer
+{
+  border: 0px solid #000000;
+  border-spacing: 30px;
+}
+.layoutregion
+{
+  border: 0px solid #000000;
+  border-spacing: 30px;
+}
+.linecontent
+{
+  background-color: #D8DBD3;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: disc;
+}
+.list10
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.list2
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: circle;
+}
+.list3
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.list4
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.list5
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.list6
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.list7
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.list8
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.list9
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.listitem
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: disc;
+}
+.listitem10
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.listitem2
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: circle;
+}
+.listitem3
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.listitem4
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.listitem5
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.listitem6
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.listitem7
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.listitem8
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.listitem9
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.note
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.notebanner
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.notecontent
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.notecontentfixed
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: 'Courier New', Courier;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.output
+{
+  background-color: #D8DBD3;
+  border: 1px solid #C1C1C1;
+  border-collapse: separate;
+  border-spacing: 1px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.pageno
+{
+  background-color: #D8DBD3;
+  border-spacing: 0px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+  text-align: right;
+  vertical-align: top;
+}
+.pages
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.pagesdate
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.pagesitem
+{
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.pagesproclabel
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.pagesprocname
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.pagestitle
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.paragraph
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.parskip
+{
+  border: 0px solid #000000;
+  border-spacing: 0px;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.prepage
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+}
+.proctitle
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.proctitlefixed
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooter
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooteremphasis
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowfooteremphasisfixed
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowfooterempty
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooterfixed
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: 'Courier New', Courier;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.rowfooterstrong
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooterstrongfixed
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheader
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheaderemphasis
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowheaderemphasisfixed
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowheaderempty
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheaderfixed
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: 'Courier New', Courier;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.rowheaderstrong
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheaderstrongfixed
+{
+  background-color: #F5F7F1;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemfooter
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.systemfooter10
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.systemfooter2
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.systemfooter3
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.systemfooter4
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.systemfooter5
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.systemfooter6
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.systemfooter7
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.systemfooter8
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.systemfooter9
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.systemtitle
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle10
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle2
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle3
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle4
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle5
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle6
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle7
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle8
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle9
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systitleandfootercontainer
+{
+  background-color: #D8DBD3;
+  border: 0px solid #000000;
+  border-spacing: 1px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.table
+{
+  border-bottom-width: 0px;
+  border-collapse: collapse;
+  border-color: #C1C1C1;
+  border-left-width: 1px;
+  border-right-width: 0px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-top-width: 1px;
+}
+.top_stacked_value
+{
+  padding-bottom: 1px;
+  border: 0;
+}
+.middle_stacked_value
+{
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border: 0;
+}
+.bottom_stacked_value
+{
+  padding-top: 1px;
+  border: 0;
+}
+.titleandnotecontainer
+{
+  background-color: #D8DBD3;
+  border: 0px solid #000000;
+  border-spacing: 1px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.titlesandfooters
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.usertext
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.warnbanner
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.warncontent
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.warncontentfixed
+{
+  background-color: #D8DBD3;
+  color: #000000;
+  font-family: 'Courier New', Courier;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="IDX"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Score distribution and descriptive statistics for All accounts by Year</td>
+</tr>
+</table><br>
+<div>
+<div align="center">
+<table class="table" cellspacing="0" cellpadding="3" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c m header" rowspan="3" scope="col">Year</th>
+<th class="c header" colspan="42" scope="colgroup">Score band</th>
+<th class="c header" rowspan="2" colspan="6" scope="colgroup">Score</th>
+</tr>
+<tr>
+<th class="c header" colspan="2" scope="colgroup">           0</th>
+<th class="c header" colspan="2" scope="colgroup">           1</th>
+<th class="c header" colspan="2" scope="colgroup">           2</th>
+<th class="c header" colspan="2" scope="colgroup">           3</th>
+<th class="c header" colspan="2" scope="colgroup">           4</th>
+<th class="c header" colspan="2" scope="colgroup">           5</th>
+<th class="c header" colspan="2" scope="colgroup">           6</th>
+<th class="c header" colspan="2" scope="colgroup">           7</th>
+<th class="c header" colspan="2" scope="colgroup">           8</th>
+<th class="c header" colspan="2" scope="colgroup">           9</th>
+<th class="c header" colspan="2" scope="colgroup">          10</th>
+<th class="c header" colspan="2" scope="colgroup">          11</th>
+<th class="c header" colspan="2" scope="colgroup">          12</th>
+<th class="c header" colspan="2" scope="colgroup">          13</th>
+<th class="c header" colspan="2" scope="colgroup">          14</th>
+<th class="c header" colspan="2" scope="colgroup">          15</th>
+<th class="c header" colspan="2" scope="colgroup">          16</th>
+<th class="c header" colspan="2" scope="colgroup">          17</th>
+<th class="c header" colspan="2" scope="colgroup">          18</th>
+<th class="c header" colspan="2" scope="colgroup">          19</th>
+<th class="c header" colspan="2" scope="colgroup">          20</th>
+</tr>
+<tr>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">P5</th>
+<th class="c header" scope="col">P25</th>
+<th class="c header" scope="col">P50</th>
+<th class="c header" scope="col">Mean</th>
+<th class="c header" scope="col">P75</th>
+<th class="c header" scope="col">P95</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l t rowheader" scope="row">1975</th>
+<td class="r b data">            51</td>
+<td class="r b data">             6,12 %</td>
+<td class="r b data">            55</td>
+<td class="r b data">             6,60 %</td>
+<td class="r b data">            42</td>
+<td class="r b data">             5,04 %</td>
+<td class="r b data">            44</td>
+<td class="r b data">             5,28 %</td>
+<td class="r b data">            65</td>
+<td class="r b data">             7,80 %</td>
+<td class="r b data">            30</td>
+<td class="r b data">             3,60 %</td>
+<td class="r b data">            54</td>
+<td class="r b data">             6,48 %</td>
+<td class="r b data">            53</td>
+<td class="r b data">             6,36 %</td>
+<td class="r b data">            42</td>
+<td class="r b data">             5,04 %</td>
+<td class="r b data">            31</td>
+<td class="r b data">             3,72 %</td>
+<td class="r b data">            53</td>
+<td class="r b data">             6,36 %</td>
+<td class="r b data">            46</td>
+<td class="r b data">             5,52 %</td>
+<td class="r b data">            32</td>
+<td class="r b data">             3,84 %</td>
+<td class="r b data">            44</td>
+<td class="r b data">             5,28 %</td>
+<td class="r b data">            29</td>
+<td class="r b data">             3,48 %</td>
+<td class="r b data">            21</td>
+<td class="r b data">             2,52 %</td>
+<td class="r b data">            46</td>
+<td class="r b data">             5,52 %</td>
+<td class="r b data">            37</td>
+<td class="r b data">             4,44 %</td>
+<td class="r b data">            27</td>
+<td class="r b data">             3,24 %</td>
+<td class="r b data">            31</td>
+<td class="r b data">             3,72 %</td>
+<td class="r b data">.</td>
+<td class="r b data">.</td>
+<td class="r b data">        214,00</td>
+<td class="r b data">        254,00</td>
+<td class="r b data">        293,00</td>
+<td class="r b data">        286,50</td>
+<td class="r b data">        321,00</td>
+<td class="r b data">        349,00</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1976</th>
+<td class="r b data">            39</td>
+<td class="r b data">             4,25 %</td>
+<td class="r b data">            51</td>
+<td class="r b data">             5,56 %</td>
+<td class="r b data">            37</td>
+<td class="r b data">             4,03 %</td>
+<td class="r b data">            38</td>
+<td class="r b data">             4,14 %</td>
+<td class="r b data">            47</td>
+<td class="r b data">             5,13 %</td>
+<td class="r b data">            46</td>
+<td class="r b data">             5,02 %</td>
+<td class="r b data">            62</td>
+<td class="r b data">             6,76 %</td>
+<td class="r b data">            40</td>
+<td class="r b data">             4,36 %</td>
+<td class="r b data">            53</td>
+<td class="r b data">             5,78 %</td>
+<td class="r b data">            53</td>
+<td class="r b data">             5,78 %</td>
+<td class="r b data">            34</td>
+<td class="r b data">             3,71 %</td>
+<td class="r b data">            51</td>
+<td class="r b data">             5,56 %</td>
+<td class="r b data">            48</td>
+<td class="r b data">             5,23 %</td>
+<td class="r b data">            50</td>
+<td class="r b data">             5,45 %</td>
+<td class="r b data">            49</td>
+<td class="r b data">             5,34 %</td>
+<td class="r b data">            35</td>
+<td class="r b data">             3,82 %</td>
+<td class="r b data">            42</td>
+<td class="r b data">             4,58 %</td>
+<td class="r b data">            62</td>
+<td class="r b data">             6,76 %</td>
+<td class="r b data">            32</td>
+<td class="r b data">             3,49 %</td>
+<td class="r b data">            43</td>
+<td class="r b data">             4,69 %</td>
+<td class="r b data">             5</td>
+<td class="r b data">             0,55 %</td>
+<td class="r b data">        219,00</td>
+<td class="r b data">        262,00</td>
+<td class="r b data">        302,00</td>
+<td class="r b data">        294,44</td>
+<td class="r b data">        329,00</td>
+<td class="r b data">        360,00</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1977</th>
+<td class="r b data">            50</td>
+<td class="r b data">             5,66 %</td>
+<td class="r b data">            47</td>
+<td class="r b data">             5,32 %</td>
+<td class="r b data">            45</td>
+<td class="r b data">             5,10 %</td>
+<td class="r b data">            35</td>
+<td class="r b data">             3,96 %</td>
+<td class="r b data">            43</td>
+<td class="r b data">             4,87 %</td>
+<td class="r b data">            35</td>
+<td class="r b data">             3,96 %</td>
+<td class="r b data">            41</td>
+<td class="r b data">             4,64 %</td>
+<td class="r b data">            36</td>
+<td class="r b data">             4,08 %</td>
+<td class="r b data">            44</td>
+<td class="r b data">             4,98 %</td>
+<td class="r b data">            50</td>
+<td class="r b data">             5,66 %</td>
+<td class="r b data">            51</td>
+<td class="r b data">             5,78 %</td>
+<td class="r b data">            34</td>
+<td class="r b data">             3,85 %</td>
+<td class="r b data">            49</td>
+<td class="r b data">             5,55 %</td>
+<td class="r b data">            44</td>
+<td class="r b data">             4,98 %</td>
+<td class="r b data">            45</td>
+<td class="r b data">             5,10 %</td>
+<td class="r b data">            33</td>
+<td class="r b data">             3,74 %</td>
+<td class="r b data">            47</td>
+<td class="r b data">             5,32 %</td>
+<td class="r b data">            45</td>
+<td class="r b data">             5,10 %</td>
+<td class="r b data">            33</td>
+<td class="r b data">             3,74 %</td>
+<td class="r b data">            52</td>
+<td class="r b data">             5,89 %</td>
+<td class="r b data">            24</td>
+<td class="r b data">             2,72 %</td>
+<td class="r b data">        215,00</td>
+<td class="r b data">        259,00</td>
+<td class="r b data">        304,00</td>
+<td class="r b data">        295,51</td>
+<td class="r b data">        330,00</td>
+<td class="r b data">        362,00</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1978</th>
+<td class="r b data">            32</td>
+<td class="r b data">             3,58 %</td>
+<td class="r b data">            49</td>
+<td class="r b data">             5,47 %</td>
+<td class="r b data">            39</td>
+<td class="r b data">             4,36 %</td>
+<td class="r b data">            41</td>
+<td class="r b data">             4,58 %</td>
+<td class="r b data">            46</td>
+<td class="r b data">             5,14 %</td>
+<td class="r b data">            41</td>
+<td class="r b data">             4,58 %</td>
+<td class="r b data">            43</td>
+<td class="r b data">             4,80 %</td>
+<td class="r b data">            37</td>
+<td class="r b data">             4,13 %</td>
+<td class="r b data">            48</td>
+<td class="r b data">             5,36 %</td>
+<td class="r b data">            34</td>
+<td class="r b data">             3,80 %</td>
+<td class="r b data">            49</td>
+<td class="r b data">             5,47 %</td>
+<td class="r b data">            45</td>
+<td class="r b data">             5,03 %</td>
+<td class="r b data">            31</td>
+<td class="r b data">             3,46 %</td>
+<td class="r b data">            44</td>
+<td class="r b data">             4,92 %</td>
+<td class="r b data">            41</td>
+<td class="r b data">             4,58 %</td>
+<td class="r b data">            37</td>
+<td class="r b data">             4,13 %</td>
+<td class="r b data">            46</td>
+<td class="r b data">             5,14 %</td>
+<td class="r b data">            53</td>
+<td class="r b data">             5,92 %</td>
+<td class="r b data">            58</td>
+<td class="r b data">             6,48 %</td>
+<td class="r b data">            56</td>
+<td class="r b data">             6,26 %</td>
+<td class="r b data">            25</td>
+<td class="r b data">             2,79 %</td>
+<td class="r b data">        223,00</td>
+<td class="r b data">        263,00</td>
+<td class="r b data">        307,00</td>
+<td class="r b data">        299,19</td>
+<td class="r b data">        332,00</td>
+<td class="r b data">        364,00</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1979</th>
+<td class="r b data">            45</td>
+<td class="r b data">             5,00 %</td>
+<td class="r b data">            52</td>
+<td class="r b data">             5,78 %</td>
+<td class="r b data">            50</td>
+<td class="r b data">             5,56 %</td>
+<td class="r b data">            45</td>
+<td class="r b data">             5,00 %</td>
+<td class="r b data">            43</td>
+<td class="r b data">             4,78 %</td>
+<td class="r b data">            41</td>
+<td class="r b data">             4,56 %</td>
+<td class="r b data">            44</td>
+<td class="r b data">             4,89 %</td>
+<td class="r b data">            42</td>
+<td class="r b data">             4,67 %</td>
+<td class="r b data">            38</td>
+<td class="r b data">             4,22 %</td>
+<td class="r b data">            37</td>
+<td class="r b data">             4,11 %</td>
+<td class="r b data">            40</td>
+<td class="r b data">             4,44 %</td>
+<td class="r b data">            38</td>
+<td class="r b data">             4,22 %</td>
+<td class="r b data">            34</td>
+<td class="r b data">             3,78 %</td>
+<td class="r b data">            48</td>
+<td class="r b data">             5,33 %</td>
+<td class="r b data">            40</td>
+<td class="r b data">             4,44 %</td>
+<td class="r b data">            42</td>
+<td class="r b data">             4,67 %</td>
+<td class="r b data">            34</td>
+<td class="r b data">             3,78 %</td>
+<td class="r b data">            47</td>
+<td class="r b data">             5,22 %</td>
+<td class="r b data">            44</td>
+<td class="r b data">             4,89 %</td>
+<td class="r b data">            69</td>
+<td class="r b data">             7,67 %</td>
+<td class="r b data">            27</td>
+<td class="r b data">             3,00 %</td>
+<td class="r b data">        217,50</td>
+<td class="r b data">        256,00</td>
+<td class="r b data">        304,00</td>
+<td class="r b data">        296,41</td>
+<td class="r b data">        331,00</td>
+<td class="r b data">        365,50</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1980</th>
+<td class="r b data">            57</td>
+<td class="r b data">             6,71 %</td>
+<td class="r b data">            30</td>
+<td class="r b data">             3,53 %</td>
+<td class="r b data">            34</td>
+<td class="r b data">             4,00 %</td>
+<td class="r b data">            44</td>
+<td class="r b data">             5,18 %</td>
+<td class="r b data">            37</td>
+<td class="r b data">             4,36 %</td>
+<td class="r b data">            41</td>
+<td class="r b data">             4,83 %</td>
+<td class="r b data">            47</td>
+<td class="r b data">             5,54 %</td>
+<td class="r b data">            35</td>
+<td class="r b data">             4,12 %</td>
+<td class="r b data">            39</td>
+<td class="r b data">             4,59 %</td>
+<td class="r b data">            31</td>
+<td class="r b data">             3,65 %</td>
+<td class="r b data">            42</td>
+<td class="r b data">             4,95 %</td>
+<td class="r b data">            38</td>
+<td class="r b data">             4,48 %</td>
+<td class="r b data">            39</td>
+<td class="r b data">             4,59 %</td>
+<td class="r b data">            32</td>
+<td class="r b data">             3,77 %</td>
+<td class="r b data">            44</td>
+<td class="r b data">             5,18 %</td>
+<td class="r b data">            43</td>
+<td class="r b data">             5,06 %</td>
+<td class="r b data">            31</td>
+<td class="r b data">             3,65 %</td>
+<td class="r b data">            56</td>
+<td class="r b data">             6,60 %</td>
+<td class="r b data">            42</td>
+<td class="r b data">             4,95 %</td>
+<td class="r b data">            50</td>
+<td class="r b data">             5,89 %</td>
+<td class="r b data">            37</td>
+<td class="r b data">             4,36 %</td>
+<td class="r b data">        213,00</td>
+<td class="r b data">        260,00</td>
+<td class="r b data">        307,00</td>
+<td class="r b data">        298,52</td>
+<td class="r b data">        332,00</td>
+<td class="r b data">        376,00</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1981</th>
+<td class="r b data">            42</td>
+<td class="r b data">             4,76 %</td>
+<td class="r b data">            34</td>
+<td class="r b data">             3,85 %</td>
+<td class="r b data">            40</td>
+<td class="r b data">             4,54 %</td>
+<td class="r b data">            52</td>
+<td class="r b data">             5,90 %</td>
+<td class="r b data">            38</td>
+<td class="r b data">             4,31 %</td>
+<td class="r b data">            32</td>
+<td class="r b data">             3,63 %</td>
+<td class="r b data">            38</td>
+<td class="r b data">             4,31 %</td>
+<td class="r b data">            46</td>
+<td class="r b data">             5,22 %</td>
+<td class="r b data">            42</td>
+<td class="r b data">             4,76 %</td>
+<td class="r b data">            40</td>
+<td class="r b data">             4,54 %</td>
+<td class="r b data">            53</td>
+<td class="r b data">             6,01 %</td>
+<td class="r b data">            38</td>
+<td class="r b data">             4,31 %</td>
+<td class="r b data">            28</td>
+<td class="r b data">             3,17 %</td>
+<td class="r b data">            50</td>
+<td class="r b data">             5,67 %</td>
+<td class="r b data">            34</td>
+<td class="r b data">             3,85 %</td>
+<td class="r b data">            55</td>
+<td class="r b data">             6,24 %</td>
+<td class="r b data">            41</td>
+<td class="r b data">             4,65 %</td>
+<td class="r b data">            51</td>
+<td class="r b data">             5,78 %</td>
+<td class="r b data">            30</td>
+<td class="r b data">             3,40 %</td>
+<td class="r b data">            53</td>
+<td class="r b data">             6,01 %</td>
+<td class="r b data">            45</td>
+<td class="r b data">             5,10 %</td>
+<td class="r b data">        218,00</td>
+<td class="r b data">        263,00</td>
+<td class="r b data">        307,00</td>
+<td class="r b data">        300,24</td>
+<td class="r b data">        331,00</td>
+<td class="r b data">        379,00</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1982</th>
+<td class="r b data">            40</td>
+<td class="r b data">             4,71 %</td>
+<td class="r b data">            32</td>
+<td class="r b data">             3,76 %</td>
+<td class="r b data">            38</td>
+<td class="r b data">             4,47 %</td>
+<td class="r b data">            46</td>
+<td class="r b data">             5,41 %</td>
+<td class="r b data">            40</td>
+<td class="r b data">             4,71 %</td>
+<td class="r b data">            44</td>
+<td class="r b data">             5,18 %</td>
+<td class="r b data">            45</td>
+<td class="r b data">             5,29 %</td>
+<td class="r b data">            44</td>
+<td class="r b data">             5,18 %</td>
+<td class="r b data">            37</td>
+<td class="r b data">             4,35 %</td>
+<td class="r b data">            37</td>
+<td class="r b data">             4,35 %</td>
+<td class="r b data">            40</td>
+<td class="r b data">             4,71 %</td>
+<td class="r b data">            56</td>
+<td class="r b data">             6,59 %</td>
+<td class="r b data">            21</td>
+<td class="r b data">             2,47 %</td>
+<td class="r b data">            50</td>
+<td class="r b data">             5,88 %</td>
+<td class="r b data">            30</td>
+<td class="r b data">             3,53 %</td>
+<td class="r b data">            58</td>
+<td class="r b data">             6,82 %</td>
+<td class="r b data">            24</td>
+<td class="r b data">             2,82 %</td>
+<td class="r b data">            53</td>
+<td class="r b data">             6,24 %</td>
+<td class="r b data">            24</td>
+<td class="r b data">             2,82 %</td>
+<td class="r b data">            36</td>
+<td class="r b data">             4,24 %</td>
+<td class="r b data">            55</td>
+<td class="r b data">             6,47 %</td>
+<td class="r b data">        219,00</td>
+<td class="r b data">        260,00</td>
+<td class="r b data">        305,50</td>
+<td class="r b data">        299,64</td>
+<td class="r b data">        330,00</td>
+<td class="r b data">        389,00</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1983</th>
+<td class="r b data">            29</td>
+<td class="r b data">             3,37 %</td>
+<td class="r b data">            45</td>
+<td class="r b data">             5,23 %</td>
+<td class="r b data">            35</td>
+<td class="r b data">             4,07 %</td>
+<td class="r b data">            35</td>
+<td class="r b data">             4,07 %</td>
+<td class="r b data">            33</td>
+<td class="r b data">             3,84 %</td>
+<td class="r b data">            40</td>
+<td class="r b data">             4,65 %</td>
+<td class="r b data">            42</td>
+<td class="r b data">             4,88 %</td>
+<td class="r b data">            43</td>
+<td class="r b data">             5,00 %</td>
+<td class="r b data">            46</td>
+<td class="r b data">             5,35 %</td>
+<td class="r b data">            40</td>
+<td class="r b data">             4,65 %</td>
+<td class="r b data">            45</td>
+<td class="r b data">             5,23 %</td>
+<td class="r b data">            45</td>
+<td class="r b data">             5,23 %</td>
+<td class="r b data">            35</td>
+<td class="r b data">             4,07 %</td>
+<td class="r b data">            38</td>
+<td class="r b data">             4,42 %</td>
+<td class="r b data">            38</td>
+<td class="r b data">             4,42 %</td>
+<td class="r b data">            61</td>
+<td class="r b data">             7,09 %</td>
+<td class="r b data">            29</td>
+<td class="r b data">             3,37 %</td>
+<td class="r b data">            44</td>
+<td class="r b data">             5,12 %</td>
+<td class="r b data">            38</td>
+<td class="r b data">             4,42 %</td>
+<td class="r b data">            38</td>
+<td class="r b data">             4,42 %</td>
+<td class="r b data">            61</td>
+<td class="r b data">             7,09 %</td>
+<td class="r b data">        222,00</td>
+<td class="r b data">        266,00</td>
+<td class="r b data">        307,00</td>
+<td class="r b data">        302,69</td>
+<td class="r b data">        330,00</td>
+<td class="r b data">        389,00</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1984</th>
+<td class="r b data">            44</td>
+<td class="r b data">             4,92 %</td>
+<td class="r b data">            42</td>
+<td class="r b data">             4,69 %</td>
+<td class="r b data">            55</td>
+<td class="r b data">             6,15 %</td>
+<td class="r b data">            44</td>
+<td class="r b data">             4,92 %</td>
+<td class="r b data">            34</td>
+<td class="r b data">             3,80 %</td>
+<td class="r b data">            43</td>
+<td class="r b data">             4,80 %</td>
+<td class="r b data">            39</td>
+<td class="r b data">             4,36 %</td>
+<td class="r b data">            40</td>
+<td class="r b data">             4,47 %</td>
+<td class="r b data">            30</td>
+<td class="r b data">             3,35 %</td>
+<td class="r b data">            43</td>
+<td class="r b data">             4,80 %</td>
+<td class="r b data">            45</td>
+<td class="r b data">             5,03 %</td>
+<td class="r b data">            45</td>
+<td class="r b data">             5,03 %</td>
+<td class="r b data">            40</td>
+<td class="r b data">             4,47 %</td>
+<td class="r b data">            53</td>
+<td class="r b data">             5,92 %</td>
+<td class="r b data">            33</td>
+<td class="r b data">             3,69 %</td>
+<td class="r b data">            69</td>
+<td class="r b data">             7,71 %</td>
+<td class="r b data">            21</td>
+<td class="r b data">             2,35 %</td>
+<td class="r b data">            48</td>
+<td class="r b data">             5,36 %</td>
+<td class="r b data">            25</td>
+<td class="r b data">             2,79 %</td>
+<td class="r b data">            42</td>
+<td class="r b data">             4,69 %</td>
+<td class="r b data">            60</td>
+<td class="r b data">             6,70 %</td>
+<td class="r b data">        218,00</td>
+<td class="r b data">        259,00</td>
+<td class="r b data">        307,00</td>
+<td class="r b data">        299,51</td>
+<td class="r b data">        330,00</td>
+<td class="r b data">        389,00</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1985</th>
+<td class="r b data">            40</td>
+<td class="r b data">             4,58 %</td>
+<td class="r b data">            40</td>
+<td class="r b data">             4,58 %</td>
+<td class="r b data">            27</td>
+<td class="r b data">             3,09 %</td>
+<td class="r b data">            45</td>
+<td class="r b data">             5,15 %</td>
+<td class="r b data">            32</td>
+<td class="r b data">             3,67 %</td>
+<td class="r b data">            40</td>
+<td class="r b data">             4,58 %</td>
+<td class="r b data">            37</td>
+<td class="r b data">             4,24 %</td>
+<td class="r b data">            50</td>
+<td class="r b data">             5,73 %</td>
+<td class="r b data">            37</td>
+<td class="r b data">             4,24 %</td>
+<td class="r b data">            30</td>
+<td class="r b data">             3,44 %</td>
+<td class="r b data">            49</td>
+<td class="r b data">             5,61 %</td>
+<td class="r b data">            54</td>
+<td class="r b data">             6,19 %</td>
+<td class="r b data">            31</td>
+<td class="r b data">             3,55 %</td>
+<td class="r b data">            46</td>
+<td class="r b data">             5,27 %</td>
+<td class="r b data">            35</td>
+<td class="r b data">             4,01 %</td>
+<td class="r b data">            56</td>
+<td class="r b data">             6,41 %</td>
+<td class="r b data">            26</td>
+<td class="r b data">             2,98 %</td>
+<td class="r b data">            40</td>
+<td class="r b data">             4,58 %</td>
+<td class="r b data">            43</td>
+<td class="r b data">             4,93 %</td>
+<td class="r b data">            45</td>
+<td class="r b data">             5,15 %</td>
+<td class="r b data">            70</td>
+<td class="r b data">             8,02 %</td>
+<td class="r b data">        219,00</td>
+<td class="r b data">        264,00</td>
+<td class="r b data">        309,00</td>
+<td class="r b data">        303,53</td>
+<td class="r b data">        332,00</td>
+<td class="r b data">        399,00</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1986</th>
+<td class="r b data">            27</td>
+<td class="r b data">             3,06 %</td>
+<td class="r b data">            39</td>
+<td class="r b data">             4,42 %</td>
+<td class="r b data">            50</td>
+<td class="r b data">             5,67 %</td>
+<td class="r b data">            40</td>
+<td class="r b data">             4,54 %</td>
+<td class="r b data">            40</td>
+<td class="r b data">             4,54 %</td>
+<td class="r b data">            40</td>
+<td class="r b data">             4,54 %</td>
+<td class="r b data">            33</td>
+<td class="r b data">             3,74 %</td>
+<td class="r b data">            46</td>
+<td class="r b data">             5,22 %</td>
+<td class="r b data">            35</td>
+<td class="r b data">             3,97 %</td>
+<td class="r b data">            50</td>
+<td class="r b data">             5,67 %</td>
+<td class="r b data">            42</td>
+<td class="r b data">             4,76 %</td>
+<td class="r b data">            55</td>
+<td class="r b data">             6,24 %</td>
+<td class="r b data">            27</td>
+<td class="r b data">             3,06 %</td>
+<td class="r b data">            46</td>
+<td class="r b data">             5,22 %</td>
+<td class="r b data">            28</td>
+<td class="r b data">             3,17 %</td>
+<td class="r b data">            48</td>
+<td class="r b data">             5,44 %</td>
+<td class="r b data">            37</td>
+<td class="r b data">             4,20 %</td>
+<td class="r b data">            46</td>
+<td class="r b data">             5,22 %</td>
+<td class="r b data">            41</td>
+<td class="r b data">             4,65 %</td>
+<td class="r b data">            45</td>
+<td class="r b data">             5,10 %</td>
+<td class="r b data">            67</td>
+<td class="r b data">             7,60 %</td>
+<td class="r b data">        223,00</td>
+<td class="r b data">        263,00</td>
+<td class="r b data">        307,50</td>
+<td class="r b data">        303,54</td>
+<td class="r b data">        334,00</td>
+<td class="r b data">        389,00</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1987</th>
+<td class="r b data">            46</td>
+<td class="r b data">             5,01 %</td>
+<td class="r b data">            40</td>
+<td class="r b data">             4,36 %</td>
+<td class="r b data">            42</td>
+<td class="r b data">             4,58 %</td>
+<td class="r b data">            47</td>
+<td class="r b data">             5,12 %</td>
+<td class="r b data">            41</td>
+<td class="r b data">             4,47 %</td>
+<td class="r b data">            37</td>
+<td class="r b data">             4,03 %</td>
+<td class="r b data">            42</td>
+<td class="r b data">             4,58 %</td>
+<td class="r b data">            46</td>
+<td class="r b data">             5,01 %</td>
+<td class="r b data">            43</td>
+<td class="r b data">             4,68 %</td>
+<td class="r b data">            42</td>
+<td class="r b data">             4,58 %</td>
+<td class="r b data">            37</td>
+<td class="r b data">             4,03 %</td>
+<td class="r b data">            63</td>
+<td class="r b data">             6,86 %</td>
+<td class="r b data">            25</td>
+<td class="r b data">             2,72 %</td>
+<td class="r b data">            40</td>
+<td class="r b data">             4,36 %</td>
+<td class="r b data">            39</td>
+<td class="r b data">             4,25 %</td>
+<td class="r b data">            41</td>
+<td class="r b data">             4,47 %</td>
+<td class="r b data">            26</td>
+<td class="r b data">             2,83 %</td>
+<td class="r b data">            50</td>
+<td class="r b data">             5,45 %</td>
+<td class="r b data">            55</td>
+<td class="r b data">             5,99 %</td>
+<td class="r b data">            39</td>
+<td class="r b data">             4,25 %</td>
+<td class="r b data">            77</td>
+<td class="r b data">             8,39 %</td>
+<td class="r b data">        217,00</td>
+<td class="r b data">        260,00</td>
+<td class="r b data">        307,00</td>
+<td class="r b data">        302,05</td>
+<td class="r b data">        335,00</td>
+<td class="r b data">        401,00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX1"></a>
+<div>
+<div  class="c">
+<img alt="Plot of score_P5 by year" src="gplot.png" style=" border-width: 0px; height: 600px; width: 800px;" border="0" class="c graph">
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX2"></a>
+<div>
+<div  class="c">
+<img alt="Plot of Percent by year identified by band" src="gplot1.png" style=" border-width: 0px; height: 600px; width: 800px;" border="0" class="c graph">
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX3"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Partial score distribution for All accounts by Year</td>
+</tr>
+<tr>
+<td class="c systemtitle2">Variable name: PSC_ACT12_N_ARREARS</td>
+</tr>
+<tr>
+<td class="c systemtitle3">Variable description: Customer number in arrears on all loans</td>
+</tr>
+</table><br>
+<div>
+<div align="center">
+<table class="table" cellspacing="0" cellpadding="3" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c m header" rowspan="3" scope="col">Year</th>
+<th class="c header" colspan="12" scope="colgroup">Partial score for PSC_ACT12_N_ARREARS</th>
+</tr>
+<tr>
+<th class="c header" colspan="2" scope="colgroup">           8</th>
+<th class="c header" colspan="2" scope="colgroup">          21</th>
+<th class="c header" colspan="2" scope="colgroup">          31</th>
+<th class="c header" colspan="2" scope="colgroup">          45</th>
+<th class="c header" colspan="2" scope="colgroup">          55</th>
+<th class="c header" colspan="2" scope="colgroup">          59</th>
+</tr>
+<tr>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l t rowheader" scope="row">1975</th>
+<td class="r b data">            60</td>
+<td class="r b data">             7,20 %</td>
+<td class="r b data">           105</td>
+<td class="r b data">            12,61 %</td>
+<td class="r b data">           251</td>
+<td class="r b data">            30,13 %</td>
+<td class="r b data">           191</td>
+<td class="r b data">            22,93 %</td>
+<td class="r b data">            63</td>
+<td class="r b data">             7,56 %</td>
+<td class="r b data">           163</td>
+<td class="r b data">            19,57 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1976</th>
+<td class="r b data">            48</td>
+<td class="r b data">             5,23 %</td>
+<td class="r b data">            72</td>
+<td class="r b data">             7,85 %</td>
+<td class="r b data">           244</td>
+<td class="r b data">            26,61 %</td>
+<td class="r b data">           241</td>
+<td class="r b data">            26,28 %</td>
+<td class="r b data">            65</td>
+<td class="r b data">             7,09 %</td>
+<td class="r b data">           247</td>
+<td class="r b data">            26,94 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1977</th>
+<td class="r b data">            45</td>
+<td class="r b data">             5,10 %</td>
+<td class="r b data">            66</td>
+<td class="r b data">             7,47 %</td>
+<td class="r b data">           241</td>
+<td class="r b data">            27,29 %</td>
+<td class="r b data">           253</td>
+<td class="r b data">            28,65 %</td>
+<td class="r b data">            58</td>
+<td class="r b data">             6,57 %</td>
+<td class="r b data">           220</td>
+<td class="r b data">            24,92 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1978</th>
+<td class="r b data">            37</td>
+<td class="r b data">             4,13 %</td>
+<td class="r b data">            58</td>
+<td class="r b data">             6,48 %</td>
+<td class="r b data">           238</td>
+<td class="r b data">            26,59 %</td>
+<td class="r b data">           252</td>
+<td class="r b data">            28,16 %</td>
+<td class="r b data">            51</td>
+<td class="r b data">             5,70 %</td>
+<td class="r b data">           259</td>
+<td class="r b data">            28,94 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1979</th>
+<td class="r b data">            40</td>
+<td class="r b data">             4,44 %</td>
+<td class="r b data">            75</td>
+<td class="r b data">             8,33 %</td>
+<td class="r b data">           239</td>
+<td class="r b data">            26,56 %</td>
+<td class="r b data">           235</td>
+<td class="r b data">            26,11 %</td>
+<td class="r b data">            59</td>
+<td class="r b data">             6,56 %</td>
+<td class="r b data">           252</td>
+<td class="r b data">            28,00 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1980</th>
+<td class="r b data">            38</td>
+<td class="r b data">             4,48 %</td>
+<td class="r b data">            68</td>
+<td class="r b data">             8,01 %</td>
+<td class="r b data">           225</td>
+<td class="r b data">            26,50 %</td>
+<td class="r b data">           205</td>
+<td class="r b data">            24,15 %</td>
+<td class="r b data">            66</td>
+<td class="r b data">             7,77 %</td>
+<td class="r b data">           247</td>
+<td class="r b data">            29,09 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1981</th>
+<td class="r b data">            41</td>
+<td class="r b data">             4,65 %</td>
+<td class="r b data">            63</td>
+<td class="r b data">             7,14 %</td>
+<td class="r b data">           197</td>
+<td class="r b data">            22,34 %</td>
+<td class="r b data">           223</td>
+<td class="r b data">            25,28 %</td>
+<td class="r b data">            73</td>
+<td class="r b data">             8,28 %</td>
+<td class="r b data">           285</td>
+<td class="r b data">            32,31 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1982</th>
+<td class="r b data">            30</td>
+<td class="r b data">             3,53 %</td>
+<td class="r b data">            69</td>
+<td class="r b data">             8,12 %</td>
+<td class="r b data">           203</td>
+<td class="r b data">            23,88 %</td>
+<td class="r b data">           225</td>
+<td class="r b data">            26,47 %</td>
+<td class="r b data">            56</td>
+<td class="r b data">             6,59 %</td>
+<td class="r b data">           267</td>
+<td class="r b data">            31,41 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1983</th>
+<td class="r b data">            29</td>
+<td class="r b data">             3,37 %</td>
+<td class="r b data">            59</td>
+<td class="r b data">             6,86 %</td>
+<td class="r b data">           213</td>
+<td class="r b data">            24,77 %</td>
+<td class="r b data">           212</td>
+<td class="r b data">            24,65 %</td>
+<td class="r b data">            71</td>
+<td class="r b data">             8,26 %</td>
+<td class="r b data">           276</td>
+<td class="r b data">            32,09 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1984</th>
+<td class="r b data">            46</td>
+<td class="r b data">             5,14 %</td>
+<td class="r b data">            70</td>
+<td class="r b data">             7,82 %</td>
+<td class="r b data">           210</td>
+<td class="r b data">            23,46 %</td>
+<td class="r b data">           223</td>
+<td class="r b data">            24,92 %</td>
+<td class="r b data">            83</td>
+<td class="r b data">             9,27 %</td>
+<td class="r b data">           263</td>
+<td class="r b data">            29,39 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1985</th>
+<td class="r b data">            38</td>
+<td class="r b data">             4,35 %</td>
+<td class="r b data">            58</td>
+<td class="r b data">             6,64 %</td>
+<td class="r b data">           203</td>
+<td class="r b data">            23,25 %</td>
+<td class="r b data">           238</td>
+<td class="r b data">            27,26 %</td>
+<td class="r b data">            57</td>
+<td class="r b data">             6,53 %</td>
+<td class="r b data">           279</td>
+<td class="r b data">            31,96 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1986</th>
+<td class="r b data">            39</td>
+<td class="r b data">             4,42 %</td>
+<td class="r b data">            66</td>
+<td class="r b data">             7,48 %</td>
+<td class="r b data">           213</td>
+<td class="r b data">            24,15 %</td>
+<td class="r b data">           228</td>
+<td class="r b data">            25,85 %</td>
+<td class="r b data">            64</td>
+<td class="r b data">             7,26 %</td>
+<td class="r b data">           272</td>
+<td class="r b data">            30,84 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1987</th>
+<td class="r b data">            47</td>
+<td class="r b data">             5,12 %</td>
+<td class="r b data">            75</td>
+<td class="r b data">             8,17 %</td>
+<td class="r b data">           206</td>
+<td class="r b data">            22,44 %</td>
+<td class="r b data">           209</td>
+<td class="r b data">            22,77 %</td>
+<td class="r b data">            73</td>
+<td class="r b data">             7,95 %</td>
+<td class="r b data">           308</td>
+<td class="r b data">            33,55 %</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX4"></a>
+<div>
+<div  class="c">
+<img alt="Plot of Percent by year identified by PSC_ACT12_N_ARREARS" src="gplot2.png" style=" border-width: 0px; height: 600px; width: 800px;" border="0" class="c graph">
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX5"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Partial score distribution for All accounts by Year</td>
+</tr>
+<tr>
+<td class="c systemtitle2">Variable name: PSC_ACT_CC</td>
+</tr>
+<tr>
+<td class="c systemtitle3">Variable description: </td>
+</tr>
+</table><br>
+<div>
+<div align="center">
+<table class="table" cellspacing="0" cellpadding="3" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c m header" rowspan="3" scope="col">Year</th>
+<th class="c header" colspan="8" scope="colgroup">Partial score for PSC_ACT_CC</th>
+</tr>
+<tr>
+<th class="c header" colspan="2" scope="colgroup">           8</th>
+<th class="c header" colspan="2" scope="colgroup">          22</th>
+<th class="c header" colspan="2" scope="colgroup">          48</th>
+<th class="c header" colspan="2" scope="colgroup">          61</th>
+</tr>
+<tr>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l t rowheader" scope="row">1975</th>
+<td class="r b data">            21</td>
+<td class="r b data">             2,52 %</td>
+<td class="r b data">            45</td>
+<td class="r b data">             5,40 %</td>
+<td class="r b data">           287</td>
+<td class="r b data">            34,45 %</td>
+<td class="r b data">           480</td>
+<td class="r b data">            57,62 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1976</th>
+<td class="r b data">            25</td>
+<td class="r b data">             2,73 %</td>
+<td class="r b data">            65</td>
+<td class="r b data">             7,09 %</td>
+<td class="r b data">           303</td>
+<td class="r b data">            33,04 %</td>
+<td class="r b data">           524</td>
+<td class="r b data">            57,14 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1977</th>
+<td class="r b data">            23</td>
+<td class="r b data">             2,60 %</td>
+<td class="r b data">            57</td>
+<td class="r b data">             6,46 %</td>
+<td class="r b data">           327</td>
+<td class="r b data">            37,03 %</td>
+<td class="r b data">           476</td>
+<td class="r b data">            53,91 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1978</th>
+<td class="r b data">            35</td>
+<td class="r b data">             3,91 %</td>
+<td class="r b data">            47</td>
+<td class="r b data">             5,25 %</td>
+<td class="r b data">           328</td>
+<td class="r b data">            36,65 %</td>
+<td class="r b data">           485</td>
+<td class="r b data">            54,19 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1979</th>
+<td class="r b data">            32</td>
+<td class="r b data">             3,56 %</td>
+<td class="r b data">            66</td>
+<td class="r b data">             7,33 %</td>
+<td class="r b data">           323</td>
+<td class="r b data">            35,89 %</td>
+<td class="r b data">           479</td>
+<td class="r b data">            53,22 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1980</th>
+<td class="r b data">            38</td>
+<td class="r b data">             4,48 %</td>
+<td class="r b data">            50</td>
+<td class="r b data">             5,89 %</td>
+<td class="r b data">           300</td>
+<td class="r b data">            35,34 %</td>
+<td class="r b data">           461</td>
+<td class="r b data">            54,30 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1981</th>
+<td class="r b data">            28</td>
+<td class="r b data">             3,17 %</td>
+<td class="r b data">            54</td>
+<td class="r b data">             6,12 %</td>
+<td class="r b data">           328</td>
+<td class="r b data">            37,19 %</td>
+<td class="r b data">           472</td>
+<td class="r b data">            53,51 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1982</th>
+<td class="r b data">            34</td>
+<td class="r b data">             4,00 %</td>
+<td class="r b data">            58</td>
+<td class="r b data">             6,82 %</td>
+<td class="r b data">           341</td>
+<td class="r b data">            40,12 %</td>
+<td class="r b data">           417</td>
+<td class="r b data">            49,06 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1983</th>
+<td class="r b data">            35</td>
+<td class="r b data">             4,07 %</td>
+<td class="r b data">            64</td>
+<td class="r b data">             7,44 %</td>
+<td class="r b data">           362</td>
+<td class="r b data">            42,09 %</td>
+<td class="r b data">           399</td>
+<td class="r b data">            46,40 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1984</th>
+<td class="r b data">            34</td>
+<td class="r b data">             3,80 %</td>
+<td class="r b data">            62</td>
+<td class="r b data">             6,93 %</td>
+<td class="r b data">           398</td>
+<td class="r b data">            44,47 %</td>
+<td class="r b data">           401</td>
+<td class="r b data">            44,80 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1985</th>
+<td class="r b data">            34</td>
+<td class="r b data">             3,89 %</td>
+<td class="r b data">            61</td>
+<td class="r b data">             6,99 %</td>
+<td class="r b data">           409</td>
+<td class="r b data">            46,85 %</td>
+<td class="r b data">           369</td>
+<td class="r b data">            42,27 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1986</th>
+<td class="r b data">            30</td>
+<td class="r b data">             3,40 %</td>
+<td class="r b data">            56</td>
+<td class="r b data">             6,35 %</td>
+<td class="r b data">           412</td>
+<td class="r b data">            46,71 %</td>
+<td class="r b data">           384</td>
+<td class="r b data">            43,54 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1987</th>
+<td class="r b data">            46</td>
+<td class="r b data">             5,01 %</td>
+<td class="r b data">            80</td>
+<td class="r b data">             8,71 %</td>
+<td class="r b data">           408</td>
+<td class="r b data">            44,44 %</td>
+<td class="r b data">           384</td>
+<td class="r b data">            41,83 %</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX6"></a>
+<div>
+<div  class="c">
+<img alt="Plot of Percent by year identified by PSC_ACT_CC" src="gplot3.png" style=" border-width: 0px; height: 600px; width: 800px;" border="0" class="c graph">
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX7"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Partial score distribution for All accounts by Year</td>
+</tr>
+<tr>
+<td class="c systemtitle2">Variable name: PSC_ACT_CCSS_DUEUTL</td>
+</tr>
+<tr>
+<td class="c systemtitle3">Variable description: Customer due installments over all installments rate on product css</td>
+</tr>
+</table><br>
+<div>
+<div align="center">
+<table class="table" cellspacing="0" cellpadding="3" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c m header" rowspan="3" scope="col">Year</th>
+<th class="c header" colspan="8" scope="colgroup">Partial score for PSC_ACT_CCSS_DUEUTL</th>
+</tr>
+<tr>
+<th class="c header" colspan="2" scope="colgroup">           8</th>
+<th class="c header" colspan="2" scope="colgroup">          30</th>
+<th class="c header" colspan="2" scope="colgroup">          48</th>
+<th class="c header" colspan="2" scope="colgroup">          70</th>
+</tr>
+<tr>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l t rowheader" scope="row">1975</th>
+<td class="r b data">            73</td>
+<td class="r b data">             8,76 %</td>
+<td class="r b data">           171</td>
+<td class="r b data">            20,53 %</td>
+<td class="r b data">            82</td>
+<td class="r b data">             9,84 %</td>
+<td class="r b data">           507</td>
+<td class="r b data">            60,86 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1976</th>
+<td class="r b data">            66</td>
+<td class="r b data">             7,20 %</td>
+<td class="r b data">           174</td>
+<td class="r b data">            18,97 %</td>
+<td class="r b data">            61</td>
+<td class="r b data">             6,65 %</td>
+<td class="r b data">           616</td>
+<td class="r b data">            67,18 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1977</th>
+<td class="r b data">            73</td>
+<td class="r b data">             8,27 %</td>
+<td class="r b data">           158</td>
+<td class="r b data">            17,89 %</td>
+<td class="r b data">            42</td>
+<td class="r b data">             4,76 %</td>
+<td class="r b data">           610</td>
+<td class="r b data">            69,08 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1978</th>
+<td class="r b data">            87</td>
+<td class="r b data">             9,72 %</td>
+<td class="r b data">           156</td>
+<td class="r b data">            17,43 %</td>
+<td class="r b data">            44</td>
+<td class="r b data">             4,92 %</td>
+<td class="r b data">           608</td>
+<td class="r b data">            67,93 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1979</th>
+<td class="r b data">            80</td>
+<td class="r b data">             8,89 %</td>
+<td class="r b data">           178</td>
+<td class="r b data">            19,78 %</td>
+<td class="r b data">            46</td>
+<td class="r b data">             5,11 %</td>
+<td class="r b data">           596</td>
+<td class="r b data">            66,22 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1980</th>
+<td class="r b data">            67</td>
+<td class="r b data">             7,89 %</td>
+<td class="r b data">           158</td>
+<td class="r b data">            18,61 %</td>
+<td class="r b data">            51</td>
+<td class="r b data">             6,01 %</td>
+<td class="r b data">           573</td>
+<td class="r b data">            67,49 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1981</th>
+<td class="r b data">            63</td>
+<td class="r b data">             7,14 %</td>
+<td class="r b data">           172</td>
+<td class="r b data">            19,50 %</td>
+<td class="r b data">            50</td>
+<td class="r b data">             5,67 %</td>
+<td class="r b data">           597</td>
+<td class="r b data">            67,69 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1982</th>
+<td class="r b data">            64</td>
+<td class="r b data">             7,53 %</td>
+<td class="r b data">           167</td>
+<td class="r b data">            19,65 %</td>
+<td class="r b data">            46</td>
+<td class="r b data">             5,41 %</td>
+<td class="r b data">           573</td>
+<td class="r b data">            67,41 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1983</th>
+<td class="r b data">            59</td>
+<td class="r b data">             6,86 %</td>
+<td class="r b data">           162</td>
+<td class="r b data">            18,84 %</td>
+<td class="r b data">            56</td>
+<td class="r b data">             6,51 %</td>
+<td class="r b data">           583</td>
+<td class="r b data">            67,79 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1984</th>
+<td class="r b data">            68</td>
+<td class="r b data">             7,60 %</td>
+<td class="r b data">           177</td>
+<td class="r b data">            19,78 %</td>
+<td class="r b data">            64</td>
+<td class="r b data">             7,15 %</td>
+<td class="r b data">           586</td>
+<td class="r b data">            65,47 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1985</th>
+<td class="r b data">            61</td>
+<td class="r b data">             6,99 %</td>
+<td class="r b data">           169</td>
+<td class="r b data">            19,36 %</td>
+<td class="r b data">            56</td>
+<td class="r b data">             6,41 %</td>
+<td class="r b data">           587</td>
+<td class="r b data">            67,24 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1986</th>
+<td class="r b data">            46</td>
+<td class="r b data">             5,22 %</td>
+<td class="r b data">           165</td>
+<td class="r b data">            18,71 %</td>
+<td class="r b data">            68</td>
+<td class="r b data">             7,71 %</td>
+<td class="r b data">           603</td>
+<td class="r b data">            68,37 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1987</th>
+<td class="r b data">            61</td>
+<td class="r b data">             6,64 %</td>
+<td class="r b data">           181</td>
+<td class="r b data">            19,72 %</td>
+<td class="r b data">            68</td>
+<td class="r b data">             7,41 %</td>
+<td class="r b data">           608</td>
+<td class="r b data">            66,23 %</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX8"></a>
+<div>
+<div  class="c">
+<img alt="Plot of Percent by year identified by PSC_ACT_CCSS_DUEUTL" src="gplot4.png" style=" border-width: 0px; height: 600px; width: 800px;" border="0" class="c graph">
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX9"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Partial score distribution for All accounts by Year</td>
+</tr>
+<tr>
+<td class="c systemtitle2">Variable name: PSC_ACT_CCSS_MIN_LNINST</td>
+</tr>
+<tr>
+<td class="c systemtitle3">Variable description: Customer minimal number of left installments on product css</td>
+</tr>
+</table><br>
+<div>
+<div align="center">
+<table class="table" cellspacing="0" cellpadding="3" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c m header" rowspan="3" scope="col">Year</th>
+<th class="c header" colspan="12" scope="colgroup">Partial score for PSC_ACT_CCSS_MIN_LNINST</th>
+</tr>
+<tr>
+<th class="c header" colspan="2" scope="colgroup">           8</th>
+<th class="c header" colspan="2" scope="colgroup">          13</th>
+<th class="c header" colspan="2" scope="colgroup">          17</th>
+<th class="c header" colspan="2" scope="colgroup">          21</th>
+<th class="c header" colspan="2" scope="colgroup">          30</th>
+<th class="c header" colspan="2" scope="colgroup">          32</th>
+</tr>
+<tr>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l t rowheader" scope="row">1975</th>
+<td class="r b data">             2</td>
+<td class="r b data">             0,24 %</td>
+<td class="r b data">           289</td>
+<td class="r b data">            34,69 %</td>
+<td class="r b data">            75</td>
+<td class="r b data">             9,00 %</td>
+<td class="r b data">           143</td>
+<td class="r b data">            17,17 %</td>
+<td class="r b data">           214</td>
+<td class="r b data">            25,69 %</td>
+<td class="r b data">           110</td>
+<td class="r b data">            13,21 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1976</th>
+<td class="r b data">            24</td>
+<td class="r b data">             2,62 %</td>
+<td class="r b data">           261</td>
+<td class="r b data">            28,46 %</td>
+<td class="r b data">            74</td>
+<td class="r b data">             8,07 %</td>
+<td class="r b data">           125</td>
+<td class="r b data">            13,63 %</td>
+<td class="r b data">           293</td>
+<td class="r b data">            31,95 %</td>
+<td class="r b data">           140</td>
+<td class="r b data">            15,27 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1977</th>
+<td class="r b data">            50</td>
+<td class="r b data">             5,66 %</td>
+<td class="r b data">           195</td>
+<td class="r b data">            22,08 %</td>
+<td class="r b data">            71</td>
+<td class="r b data">             8,04 %</td>
+<td class="r b data">           180</td>
+<td class="r b data">            20,39 %</td>
+<td class="r b data">           290</td>
+<td class="r b data">            32,84 %</td>
+<td class="r b data">            97</td>
+<td class="r b data">            10,99 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1978</th>
+<td class="r b data">            40</td>
+<td class="r b data">             4,47 %</td>
+<td class="r b data">           214</td>
+<td class="r b data">            23,91 %</td>
+<td class="r b data">            61</td>
+<td class="r b data">             6,82 %</td>
+<td class="r b data">           185</td>
+<td class="r b data">            20,67 %</td>
+<td class="r b data">           286</td>
+<td class="r b data">            31,96 %</td>
+<td class="r b data">           109</td>
+<td class="r b data">            12,18 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1979</th>
+<td class="r b data">            46</td>
+<td class="r b data">             5,11 %</td>
+<td class="r b data">           258</td>
+<td class="r b data">            28,67 %</td>
+<td class="r b data">            56</td>
+<td class="r b data">             6,22 %</td>
+<td class="r b data">           156</td>
+<td class="r b data">            17,33 %</td>
+<td class="r b data">           264</td>
+<td class="r b data">            29,33 %</td>
+<td class="r b data">           120</td>
+<td class="r b data">            13,33 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1980</th>
+<td class="r b data">            19</td>
+<td class="r b data">             2,24 %</td>
+<td class="r b data">           231</td>
+<td class="r b data">            27,21 %</td>
+<td class="r b data">            66</td>
+<td class="r b data">             7,77 %</td>
+<td class="r b data">           141</td>
+<td class="r b data">            16,61 %</td>
+<td class="r b data">           273</td>
+<td class="r b data">            32,16 %</td>
+<td class="r b data">           119</td>
+<td class="r b data">            14,02 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1981</th>
+<td class="r b data">            34</td>
+<td class="r b data">             3,85 %</td>
+<td class="r b data">           242</td>
+<td class="r b data">            27,44 %</td>
+<td class="r b data">            60</td>
+<td class="r b data">             6,80 %</td>
+<td class="r b data">           167</td>
+<td class="r b data">            18,93 %</td>
+<td class="r b data">           273</td>
+<td class="r b data">            30,95 %</td>
+<td class="r b data">           106</td>
+<td class="r b data">            12,02 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1982</th>
+<td class="r b data">            24</td>
+<td class="r b data">             2,82 %</td>
+<td class="r b data">           252</td>
+<td class="r b data">            29,65 %</td>
+<td class="r b data">            66</td>
+<td class="r b data">             7,76 %</td>
+<td class="r b data">           147</td>
+<td class="r b data">            17,29 %</td>
+<td class="r b data">           251</td>
+<td class="r b data">            29,53 %</td>
+<td class="r b data">           110</td>
+<td class="r b data">            12,94 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1983</th>
+<td class="r b data">            27</td>
+<td class="r b data">             3,14 %</td>
+<td class="r b data">           239</td>
+<td class="r b data">            27,79 %</td>
+<td class="r b data">            76</td>
+<td class="r b data">             8,84 %</td>
+<td class="r b data">           158</td>
+<td class="r b data">            18,37 %</td>
+<td class="r b data">           243</td>
+<td class="r b data">            28,26 %</td>
+<td class="r b data">           117</td>
+<td class="r b data">            13,60 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1984</th>
+<td class="r b data">            34</td>
+<td class="r b data">             3,80 %</td>
+<td class="r b data">           273</td>
+<td class="r b data">            30,50 %</td>
+<td class="r b data">            71</td>
+<td class="r b data">             7,93 %</td>
+<td class="r b data">           140</td>
+<td class="r b data">            15,64 %</td>
+<td class="r b data">           257</td>
+<td class="r b data">            28,72 %</td>
+<td class="r b data">           120</td>
+<td class="r b data">            13,41 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1985</th>
+<td class="r b data">            22</td>
+<td class="r b data">             2,52 %</td>
+<td class="r b data">           240</td>
+<td class="r b data">            27,49 %</td>
+<td class="r b data">            59</td>
+<td class="r b data">             6,76 %</td>
+<td class="r b data">           144</td>
+<td class="r b data">            16,49 %</td>
+<td class="r b data">           249</td>
+<td class="r b data">            28,52 %</td>
+<td class="r b data">           159</td>
+<td class="r b data">            18,21 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1986</th>
+<td class="r b data">            16</td>
+<td class="r b data">             1,81 %</td>
+<td class="r b data">           267</td>
+<td class="r b data">            30,27 %</td>
+<td class="r b data">            68</td>
+<td class="r b data">             7,71 %</td>
+<td class="r b data">           128</td>
+<td class="r b data">            14,51 %</td>
+<td class="r b data">           249</td>
+<td class="r b data">            28,23 %</td>
+<td class="r b data">           154</td>
+<td class="r b data">            17,46 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1987</th>
+<td class="r b data">            19</td>
+<td class="r b data">             2,07 %</td>
+<td class="r b data">           284</td>
+<td class="r b data">            30,94 %</td>
+<td class="r b data">            79</td>
+<td class="r b data">             8,61 %</td>
+<td class="r b data">           108</td>
+<td class="r b data">            11,76 %</td>
+<td class="r b data">           264</td>
+<td class="r b data">            28,76 %</td>
+<td class="r b data">           164</td>
+<td class="r b data">            17,86 %</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX10"></a>
+<div>
+<div  class="c">
+<img alt="Plot of Percent by year identified by PSC_ACT_CCSS_MIN_LNINST" src="gplot5.png" style=" border-width: 0px; height: 600px; width: 800px;" border="0" class="c graph">
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX11"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Partial score distribution for All accounts by Year</td>
+</tr>
+<tr>
+<td class="c systemtitle2">Variable name: PSC_ACT_CCSS_N_STATC</td>
+</tr>
+<tr>
+<td class="c systemtitle3">Variable description: Customer historical number of finished loans with status C on product css</td>
+</tr>
+</table><br>
+<div>
+<div align="center">
+<table class="table" cellspacing="0" cellpadding="3" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c m header" rowspan="3" scope="col">Year</th>
+<th class="c header" colspan="8" scope="colgroup">Partial score for PSC_ACT_CCSS_N_STATC</th>
+</tr>
+<tr>
+<th class="c header" colspan="2" scope="colgroup">           8</th>
+<th class="c header" colspan="2" scope="colgroup">          27</th>
+<th class="c header" colspan="2" scope="colgroup">          56</th>
+<th class="c header" colspan="2" scope="colgroup">          79</th>
+</tr>
+<tr>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l t rowheader" scope="row">1975</th>
+<td class="r b data">           679</td>
+<td class="r b data">            81,51 %</td>
+<td class="r b data">           154</td>
+<td class="r b data">            18,49 %</td>
+<td class="r b data">.</td>
+<td class="r b data">.</td>
+<td class="r b data">.</td>
+<td class="r b data">.</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1976</th>
+<td class="r b data">           749</td>
+<td class="r b data">            81,68 %</td>
+<td class="r b data">           155</td>
+<td class="r b data">            16,90 %</td>
+<td class="r b data">            13</td>
+<td class="r b data">             1,42 %</td>
+<td class="r b data">.</td>
+<td class="r b data">.</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1977</th>
+<td class="r b data">           664</td>
+<td class="r b data">            75,20 %</td>
+<td class="r b data">           155</td>
+<td class="r b data">            17,55 %</td>
+<td class="r b data">            64</td>
+<td class="r b data">             7,25 %</td>
+<td class="r b data">.</td>
+<td class="r b data">.</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1978</th>
+<td class="r b data">           661</td>
+<td class="r b data">            73,85 %</td>
+<td class="r b data">           153</td>
+<td class="r b data">            17,09 %</td>
+<td class="r b data">            81</td>
+<td class="r b data">             9,05 %</td>
+<td class="r b data">.</td>
+<td class="r b data">.</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1979</th>
+<td class="r b data">           680</td>
+<td class="r b data">            75,56 %</td>
+<td class="r b data">           138</td>
+<td class="r b data">            15,33 %</td>
+<td class="r b data">            81</td>
+<td class="r b data">             9,00 %</td>
+<td class="r b data">             1</td>
+<td class="r b data">             0,11 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1980</th>
+<td class="r b data">           643</td>
+<td class="r b data">            75,74 %</td>
+<td class="r b data">           120</td>
+<td class="r b data">            14,13 %</td>
+<td class="r b data">            48</td>
+<td class="r b data">             5,65 %</td>
+<td class="r b data">            38</td>
+<td class="r b data">             4,48 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1981</th>
+<td class="r b data">           683</td>
+<td class="r b data">            77,44 %</td>
+<td class="r b data">           122</td>
+<td class="r b data">            13,83 %</td>
+<td class="r b data">            26</td>
+<td class="r b data">             2,95 %</td>
+<td class="r b data">            51</td>
+<td class="r b data">             5,78 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1982</th>
+<td class="r b data">           671</td>
+<td class="r b data">            78,94 %</td>
+<td class="r b data">           100</td>
+<td class="r b data">            11,76 %</td>
+<td class="r b data">            14</td>
+<td class="r b data">             1,65 %</td>
+<td class="r b data">            65</td>
+<td class="r b data">             7,65 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1983</th>
+<td class="r b data">           664</td>
+<td class="r b data">            77,21 %</td>
+<td class="r b data">           100</td>
+<td class="r b data">            11,63 %</td>
+<td class="r b data">            17</td>
+<td class="r b data">             1,98 %</td>
+<td class="r b data">            79</td>
+<td class="r b data">             9,19 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1984</th>
+<td class="r b data">           700</td>
+<td class="r b data">            78,21 %</td>
+<td class="r b data">            97</td>
+<td class="r b data">            10,84 %</td>
+<td class="r b data">            15</td>
+<td class="r b data">             1,68 %</td>
+<td class="r b data">            83</td>
+<td class="r b data">             9,27 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1985</th>
+<td class="r b data">           643</td>
+<td class="r b data">            73,65 %</td>
+<td class="r b data">           131</td>
+<td class="r b data">            15,01 %</td>
+<td class="r b data">            22</td>
+<td class="r b data">             2,52 %</td>
+<td class="r b data">            77</td>
+<td class="r b data">             8,82 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1986</th>
+<td class="r b data">           654</td>
+<td class="r b data">            74,15 %</td>
+<td class="r b data">           131</td>
+<td class="r b data">            14,85 %</td>
+<td class="r b data">            18</td>
+<td class="r b data">             2,04 %</td>
+<td class="r b data">            79</td>
+<td class="r b data">             8,96 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1987</th>
+<td class="r b data">           672</td>
+<td class="r b data">            73,20 %</td>
+<td class="r b data">           142</td>
+<td class="r b data">            15,47 %</td>
+<td class="r b data">            16</td>
+<td class="r b data">             1,74 %</td>
+<td class="r b data">            88</td>
+<td class="r b data">             9,59 %</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX12"></a>
+<div>
+<div  class="c">
+<img alt="Plot of Percent by year identified by PSC_ACT_CCSS_N_STATC" src="gplot6.png" style=" border-width: 0px; height: 600px; width: 800px;" border="0" class="c graph">
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX13"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Partial score distribution for All accounts by Year</td>
+</tr>
+<tr>
+<td class="c systemtitle2">Variable name: PSC_APP_CHAR_JOB_CODE</td>
+</tr>
+<tr>
+<td class="c systemtitle3">Variable description: </td>
+</tr>
+</table><br>
+<div>
+<div align="center">
+<table class="table" cellspacing="0" cellpadding="3" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c m header" rowspan="3" scope="col">Year</th>
+<th class="c header" colspan="8" scope="colgroup">Partial score for PSC_APP_CHAR_JOB_CODE</th>
+</tr>
+<tr>
+<th class="c header" colspan="2" scope="colgroup">           8</th>
+<th class="c header" colspan="2" scope="colgroup">          88</th>
+<th class="c header" colspan="2" scope="colgroup">         113</th>
+<th class="c header" colspan="2" scope="colgroup">         115</th>
+</tr>
+<tr>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+<th class="c header" scope="col">N</th>
+<th class="c header" scope="col">Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l t rowheader" scope="row">1975</th>
+<td class="r b data">            38</td>
+<td class="r b data">             4,56 %</td>
+<td class="r b data">            58</td>
+<td class="r b data">             6,96 %</td>
+<td class="r b data">           292</td>
+<td class="r b data">            35,05 %</td>
+<td class="r b data">           445</td>
+<td class="r b data">            53,42 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1976</th>
+<td class="r b data">            32</td>
+<td class="r b data">             3,49 %</td>
+<td class="r b data">            54</td>
+<td class="r b data">             5,89 %</td>
+<td class="r b data">           302</td>
+<td class="r b data">            32,93 %</td>
+<td class="r b data">           529</td>
+<td class="r b data">            57,69 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1977</th>
+<td class="r b data">            41</td>
+<td class="r b data">             4,64 %</td>
+<td class="r b data">            54</td>
+<td class="r b data">             6,12 %</td>
+<td class="r b data">           276</td>
+<td class="r b data">            31,26 %</td>
+<td class="r b data">           512</td>
+<td class="r b data">            57,98 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1978</th>
+<td class="r b data">            22</td>
+<td class="r b data">             2,46 %</td>
+<td class="r b data">            47</td>
+<td class="r b data">             5,25 %</td>
+<td class="r b data">           292</td>
+<td class="r b data">            32,63 %</td>
+<td class="r b data">           534</td>
+<td class="r b data">            59,66 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1979</th>
+<td class="r b data">            25</td>
+<td class="r b data">             2,78 %</td>
+<td class="r b data">            50</td>
+<td class="r b data">             5,56 %</td>
+<td class="r b data">           262</td>
+<td class="r b data">            29,11 %</td>
+<td class="r b data">           563</td>
+<td class="r b data">            62,56 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1980</th>
+<td class="r b data">            34</td>
+<td class="r b data">             4,00 %</td>
+<td class="r b data">            48</td>
+<td class="r b data">             5,65 %</td>
+<td class="r b data">           232</td>
+<td class="r b data">            27,33 %</td>
+<td class="r b data">           535</td>
+<td class="r b data">            63,02 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1981</th>
+<td class="r b data">            29</td>
+<td class="r b data">             3,29 %</td>
+<td class="r b data">            48</td>
+<td class="r b data">             5,44 %</td>
+<td class="r b data">           208</td>
+<td class="r b data">            23,58 %</td>
+<td class="r b data">           597</td>
+<td class="r b data">            67,69 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1982</th>
+<td class="r b data">            22</td>
+<td class="r b data">             2,59 %</td>
+<td class="r b data">            45</td>
+<td class="r b data">             5,29 %</td>
+<td class="r b data">           166</td>
+<td class="r b data">            19,53 %</td>
+<td class="r b data">           617</td>
+<td class="r b data">            72,59 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1983</th>
+<td class="r b data">            14</td>
+<td class="r b data">             1,63 %</td>
+<td class="r b data">            37</td>
+<td class="r b data">             4,30 %</td>
+<td class="r b data">           149</td>
+<td class="r b data">            17,33 %</td>
+<td class="r b data">           660</td>
+<td class="r b data">            76,74 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1984</th>
+<td class="r b data">            21</td>
+<td class="r b data">             2,35 %</td>
+<td class="r b data">            41</td>
+<td class="r b data">             4,58 %</td>
+<td class="r b data">           127</td>
+<td class="r b data">            14,19 %</td>
+<td class="r b data">           706</td>
+<td class="r b data">            78,88 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1985</th>
+<td class="r b data">            14</td>
+<td class="r b data">             1,60 %</td>
+<td class="r b data">            27</td>
+<td class="r b data">             3,09 %</td>
+<td class="r b data">           139</td>
+<td class="r b data">            15,92 %</td>
+<td class="r b data">           693</td>
+<td class="r b data">            79,38 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1986</th>
+<td class="r b data">            19</td>
+<td class="r b data">             2,15 %</td>
+<td class="r b data">            31</td>
+<td class="r b data">             3,51 %</td>
+<td class="r b data">           146</td>
+<td class="r b data">            16,55 %</td>
+<td class="r b data">           686</td>
+<td class="r b data">            77,78 %</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1987</th>
+<td class="r b data">            19</td>
+<td class="r b data">             2,07 %</td>
+<td class="r b data">            17</td>
+<td class="r b data">             1,85 %</td>
+<td class="r b data">           141</td>
+<td class="r b data">            15,36 %</td>
+<td class="r b data">           741</td>
+<td class="r b data">            80,72 %</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX14"></a>
+<div>
+<div  class="c">
+<img alt="Plot of Percent by year identified by PSC_APP_CHAR_JOB_CODE" src="gplot7.png" style=" border-width: 0px; height: 600px; width: 800px;" border="0" class="c graph">
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX15"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Variable partial score for All accounts by Year</td>
+</tr>
+</table><br>
+<div>
+<div align="center">
+<table class="table" cellspacing="0" cellpadding="3" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c m header" rowspan="3" scope="col">Year</th>
+<th class="c header" colspan="6" scope="colgroup">Average partial score</th>
+</tr>
+<tr>
+<th class="c header" colspan="6" scope="colgroup">Variable name</th>
+</tr>
+<tr>
+<th class="c header" scope="col">PSC_ACT12_N_ARREARS<br/>            </th>
+<th class="c header" scope="col">PSC_ACT_CC      <br/>               </th>
+<th class="c header" scope="col">PSC_ACT_CCSS_DUEUTL<br/>            </th>
+<th class="c header" scope="col">PSC_ACT_CCSS_MIN_LNINST<br/>        </th>
+<th class="c header" scope="col">PSC_ACT_CCSS_N_STATC<br/>           </th>
+<th class="c header" scope="col">PSC_APP_CHAR_JOB_CODE<br/>          </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l t rowheader" scope="row">1975</th>
+<td class="r b data">       38,59</td>
+<td class="r b data">       53,08</td>
+<td class="r b data">       54,19</td>
+<td class="r b data">       21,60</td>
+<td class="r b data">       11,51</td>
+<td class="r b data">      107,54</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1976</th>
+<td class="r b data">       41,93</td>
+<td class="r b data">       52,50</td>
+<td class="r b data">       56,48</td>
+<td class="r b data">       22,62</td>
+<td class="r b data">       11,89</td>
+<td class="r b data">      109,02</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1977</th>
+<td class="r b data">       41,64</td>
+<td class="r b data">       52,29</td>
+<td class="r b data">       56,67</td>
+<td class="r b data">       22,34</td>
+<td class="r b data">       14,81</td>
+<td class="r b data">      107,76</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1978</th>
+<td class="r b data">       42,81</td>
+<td class="r b data">       52,12</td>
+<td class="r b data">       55,92</td>
+<td class="r b data">       22,45</td>
+<td class="r b data">       15,59</td>
+<td class="r b data">      110,30</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1979</th>
+<td class="r b data">       42,21</td>
+<td class="r b data">       51,59</td>
+<td class="r b data">       55,45</td>
+<td class="r b data">       21,90</td>
+<td class="r b data">       15,31</td>
+<td class="r b data">      109,95</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1980</th>
+<td class="r b data">       42,56</td>
+<td class="r b data">       51,74</td>
+<td class="r b data">       56,34</td>
+<td class="r b data">       22,66</td>
+<td class="r b data">       16,58</td>
+<td class="r b data">      108,64</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1981</th>
+<td class="r b data">       43,79</td>
+<td class="r b data">       52,10</td>
+<td class="r b data">       56,52</td>
+<td class="r b data">       22,14</td>
+<td class="r b data">       16,15</td>
+<td class="r b data">      109,54</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1982</th>
+<td class="r b data">       43,46</td>
+<td class="r b data">       51,00</td>
+<td class="r b data">       56,28</td>
+<td class="r b data">       22,03</td>
+<td class="r b data">       16,46</td>
+<td class="r b data">      110,41</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1983</th>
+<td class="r b data">       43,96</td>
+<td class="r b data">       50,47</td>
+<td class="r b data">       56,78</td>
+<td class="r b data">       22,05</td>
+<td class="r b data">       17,68</td>
+<td class="r b data">      111,75</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1984</th>
+<td class="r b data">       42,98</td>
+<td class="r b data">       50,50</td>
+<td class="r b data">       55,81</td>
+<td class="r b data">       21,81</td>
+<td class="r b data">       17,45</td>
+<td class="r b data">      110,97</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1985</th>
+<td class="r b data">       43,67</td>
+<td class="r b data">       50,12</td>
+<td class="r b data">       56,51</td>
+<td class="r b data">       22,77</td>
+<td class="r b data">       18,32</td>
+<td class="r b data">      112,13</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1986</th>
+<td class="r b data">       43,23</td>
+<td class="r b data">       50,65</td>
+<td class="r b data">       57,59</td>
+<td class="r b data">       22,50</td>
+<td class="r b data">       18,16</td>
+<td class="r b data">      111,41</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1987</th>
+<td class="r b data">       43,50</td>
+<td class="r b data">       49,17</td>
+<td class="r b data">       56,36</td>
+<td class="r b data">       22,47</td>
+<td class="r b data">       18,58</td>
+<td class="r b data">      111,98</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX16"></a>
+<div>
+<div  class="c">
+<img alt="Plot of avg_score by year identified by name" src="gplot8.png" style=" border-width: 0px; height: 600px; width: 800px;" border="0" class="c graph">
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX17"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Importance of variables for All accounts by Year</td>
+</tr>
+</table><br>
+<div>
+<div align="center">
+<table class="table" cellspacing="0" cellpadding="3" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c m header" rowspan="2" scope="col">Year</th>
+<th class="c header" colspan="6" scope="colgroup">Importance of variable</th>
+</tr>
+<tr>
+<th class="c header" scope="col">PSC_ACT12_N_ARREARS</th>
+<th class="c header" scope="col">PSC_ACT_CC</th>
+<th class="c header" scope="col">PSC_ACT_CCSS_DUEUTL</th>
+<th class="c header" scope="col">PSC_ACT_CCSS_MIN_LNINST</th>
+<th class="c header" scope="col">PSC_ACT_CCSS_N_STATC</th>
+<th class="c header" scope="col">PSC_APP_CHAR_JOB_CODE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l t rowheader" scope="row">1975</th>
+<td class="r b data">      22,67%</td>
+<td class="r b data">      23,56%</td>
+<td class="r b data">      27,56%</td>
+<td class="r b data">      10,67%</td>
+<td class="r b data">       8,44%</td>
+<td class="r b data">      47,56%</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1976</th>
+<td class="r b data">      18,35%</td>
+<td class="r b data">      19,06%</td>
+<td class="r b data">      22,30%</td>
+<td class="r b data">       8,63%</td>
+<td class="r b data">      17,27%</td>
+<td class="r b data">      38,49%</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1977</th>
+<td class="r b data">      18,09%</td>
+<td class="r b data">      18,79%</td>
+<td class="r b data">      21,99%</td>
+<td class="r b data">       8,51%</td>
+<td class="r b data">      17,02%</td>
+<td class="r b data">      37,94%</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1978</th>
+<td class="r b data">      19,32%</td>
+<td class="r b data">      20,08%</td>
+<td class="r b data">      23,48%</td>
+<td class="r b data">       9,09%</td>
+<td class="r b data">      18,18%</td>
+<td class="r b data">      40,53%</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1979</th>
+<td class="r b data">      19,54%</td>
+<td class="r b data">      20,31%</td>
+<td class="r b data">      23,75%</td>
+<td class="r b data">       9,20%</td>
+<td class="r b data">      27,20%</td>
+<td class="r b data">      41,00%</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1980</th>
+<td class="r b data">      16,19%</td>
+<td class="r b data">      16,83%</td>
+<td class="r b data">      19,68%</td>
+<td class="r b data">       7,62%</td>
+<td class="r b data">      22,54%</td>
+<td class="r b data">      33,97%</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1981</th>
+<td class="r b data">      19,25%</td>
+<td class="r b data">      20,00%</td>
+<td class="r b data">      23,40%</td>
+<td class="r b data">       9,06%</td>
+<td class="r b data">      26,79%</td>
+<td class="r b data">      40,38%</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1982</th>
+<td class="r b data">      19,25%</td>
+<td class="r b data">      20,00%</td>
+<td class="r b data">      23,40%</td>
+<td class="r b data">       9,06%</td>
+<td class="r b data">      26,79%</td>
+<td class="r b data">      40,38%</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1983</th>
+<td class="r b data">      20,99%</td>
+<td class="r b data">      21,81%</td>
+<td class="r b data">      25,51%</td>
+<td class="r b data">       9,88%</td>
+<td class="r b data">      29,22%</td>
+<td class="r b data">      44,03%</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1984</th>
+<td class="r b data">      18,09%</td>
+<td class="r b data">      18,79%</td>
+<td class="r b data">      21,99%</td>
+<td class="r b data">       8,51%</td>
+<td class="r b data">      25,18%</td>
+<td class="r b data">      37,94%</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1985</th>
+<td class="r b data">      19,92%</td>
+<td class="r b data">      20,70%</td>
+<td class="r b data">      24,22%</td>
+<td class="r b data">       9,38%</td>
+<td class="r b data">      27,73%</td>
+<td class="r b data">      41,80%</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1986</th>
+<td class="r b data">      19,84%</td>
+<td class="r b data">      20,62%</td>
+<td class="r b data">      24,12%</td>
+<td class="r b data">       9,34%</td>
+<td class="r b data">      27,63%</td>
+<td class="r b data">      41,63%</td>
+</tr>
+<tr>
+<th class="l t rowheader" scope="row">1987</th>
+<td class="r b data">      18,28%</td>
+<td class="r b data">      19,00%</td>
+<td class="r b data">      22,22%</td>
+<td class="r b data">       8,60%</td>
+<td class="r b data">      25,45%</td>
+<td class="r b data">      38,35%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX18"></a>
+<div>
+<div  class="c">
+<img alt="Plot of PSC_ACT12_N_ARREARS by year" src="gplot9.png" style=" border-width: 0px; height: 600px; width: 800px;" border="0" class="c graph">
+</div>
+</div>
+<br>
+</div>
+</body>
+</html>
