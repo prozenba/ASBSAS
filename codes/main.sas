@@ -5,8 +5,8 @@
 /*      kprzan@interia.pl                              */
 /*******************************************************/
 
-%let prefix_dir=c:\karol\oferta_zajec\CS-AUT\software\ASB_SAS\;
-%let nodedir=&prefix_dir.models\;
+%let prefix_dir=/export/viya/homes/piotr.rozenbajgier@sgh.waw.pl/CS/;
+%let nodedir=&prefix_dir.models/;
 
 %let import_data=abt.train_woe;
 %let import_validate=abt.valid_woe;
@@ -37,7 +37,7 @@
 /*Additional parameters to create more than one scorecards*/
 %let the_best_model=1;
 
-%let dir_codes=&prefix_dir.codes\;
+%let dir_codes=&prefix_dir.codes/;
 
 %let in_abt=inlib.abt_app;
 %let prop=0.5;
