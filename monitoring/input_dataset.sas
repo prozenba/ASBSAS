@@ -8,8 +8,8 @@
 
 
 
-libname inlib "c:\karol\oferta_zajec\CS-AUT\software\ASB_SAS\\inlib\" compress=yes;
-libname out "c:\karol\oferta_zajec\CS-AUT\software\ASB_SAS\monitoring\data\" compress=yes;
+libname inlib "/export/viya/homes/piotr.rozenbajgier@sgh.waw.pl/CS/inlib/" compress=yes;
+libname out "/export/viya/homes/piotr.rozenbajgier@sgh.waw.pl/CS/monitoring/data/" compress=yes;
 
 
 %let dir_codes=%sysfunc(pathname(out));
@@ -53,7 +53,7 @@ run;
 
 
 %let zbior=out.abt;
-%include "&dir_codes.\scoring_code.sas" / source2;
+%include "&dir_codes./scoring_code.sas" / source2;
 
 proc delete data=out.abt;
 run;
