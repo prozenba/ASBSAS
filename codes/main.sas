@@ -5,7 +5,7 @@
 /*      kprzan@interia.pl                              */
 /*******************************************************/
 
-%let prefix_dir=/export/viya/homes/piotr.rozenbajgier@sgh.waw.pl/CS/;
+%let prefix_dir=&_USERHOME./ASBSAS/;
 %let nodedir=&prefix_dir.models/;
 
 %let import_data=abt.train_woe;
