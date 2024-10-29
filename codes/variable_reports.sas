@@ -8,7 +8,7 @@
 
 
 options ls=256;
-options mprint;
+
 %let nr_cent=99;
 
 proc format;
