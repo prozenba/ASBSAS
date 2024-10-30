@@ -231,8 +231,8 @@ run;
 %let il_seed=100;
 /*%let il_seed=10000;*/
 /*%let il_seed=20000;*/
-%include "&dir_codes.Bootstrap_validation.sas" / source2;
-%include "&dir_codes.CI_gini.sas" / source2;
+%include "&dir_codes.bootstrap_validation.sas" / source2;
+%include "&dir_codes.ci_gini.sas" / source2;
 
 %include "&dir_codes.final_report.sas" / source2;
 
