@@ -5,10 +5,10 @@
 /*      kprzan@interia.pl                              */
 /*******************************************************/
 /*For SAS Viya Workbench  */
-%let prefix_dir=/workspaces/workspace/ASBSAS/;
+%let prefix_dir=&WORKSPACE_PATH./ASBSAS/;
 
 /*For SAS Viya  */
-%let prefix_dir=/export/viya/homes/&SYSUSERID./ASBSAS/;
+/* %let prefix_dir=/export/viya/homes/&SYSUSERID./ASBSAS/; */
 
 %let nodedir=&prefix_dir.models/;
 
@@ -242,4 +242,5 @@ run;
 
 
 %include "&dir_codes.scoring_code.sas" / source2;
+
 
