@@ -566,10 +566,11 @@ run;
 quit;
 ods html close;
 ods listing;
-goptions reset=all device=win;
+goptions reset=all;
 
 
 %end;
 
 %mend;
 %make_details;
+
