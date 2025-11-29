@@ -4,8 +4,12 @@
 /*  (c) Karol Przanowski - Advanced Analytical Support */
 /*      kprzan@interia.pl                              */
 /*******************************************************/
+/*For SAS Viya Workbench  */
+%let prefix_dir=/workspaces/workspace/ASBSAS/;
 
+/*For SAS Viya  */
 %let prefix_dir=/export/viya/homes/&SYSUSERID./ASBSAS/;
+
 %let nodedir=&prefix_dir.models/;
 
 %let import_data=abt.train_woe;
@@ -238,3 +242,4 @@ run;
 
 
 %include "&dir_codes.scoring_code.sas" / source2;
+
