@@ -185,6 +185,12 @@ quit;
 
 %macro calc_design;
 %include "&dir_codes.coding.sas" / source2;
+
+
+sasfile &import_data load;
+sasfile &import_validate load;
+
+
 %include "&dir_codes.variable_pre_selection_1step.sas" / source2;
 data &lib..good_variables_stat_1step;
 set &lib..variables_stat_1step;
@@ -261,6 +267,9 @@ run;
 sasfile inlib.abt_app close;
 sasfile &zb close;
 sasfile &zb_v close;
+sasfile &import_data close;
+sasfile &import_validate close;
+
 
 
 
