@@ -4,6 +4,11 @@
 /*  (c) Karol Przanowski - Advanced Analytical Support */
 /*      kprzan@interia.pl                              */
 /*******************************************************/
+
+  ;*';*";*/;run;quit;ods html5(id=vscode) close;
+%let START=%sysfunc(datetime(), datetime20.);
+%let STARTT=%sysfunc(time());
+
 /*For SAS Viya Workbench  */
 %let prefix_dir=&WORKSPACE_PATH./ASBSAS/;
 
@@ -59,6 +64,9 @@ libname models "&prefix_dir.models";
 libname freq "&prefix_dir.freq";
 libname adj "&prefix_dir.adj";
 libname inlib "&prefix_dir.inlib" compress=yes;
+
+sasfile inlib.abt_app load;
+
 
 /*Two special macros to calculate Gini in various ways*/
 %macro power(dataset,variable,default); 
@@ -138,7 +146,13 @@ where '197501'<=period<='198712' and product='css' and decision='A';
 %mend;
 
 
+
 %include "&dir_codes.train_valid.sas" / source2;
+
+sasfile &zb load;
+sasfile &zb_v load;
+
+
 
 /*Dataset with labels is important for variable reports*/
 proc sql;
@@ -244,3 +258,22 @@ run;
 %include "&dir_codes.scoring_code.sas" / source2;
 
 
+sasfile inlib.abt_app close;
+sasfile &zb close;
+sasfile &zb_v close;
+
+
+
+%let END=%sysfunc(datetime(), datetime20.);
+%let ENDT=%sysfunc(time());
+
+%put &=START;
+%put &=END;
+
+%put &=STARTT;
+%put &=ENDT;
+
+
+%let runtime = %sysfunc(putn(%sysevalf(&ENDT-&STARTT), time10.));
+
+%put &=RunTime: 
