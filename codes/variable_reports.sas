@@ -83,7 +83,7 @@ run;
 %put **&ncl**;
 
 
-%let reportsdir=&prefix_dir.results\%sysfunc(compress(&design,_))\;
+%let reportsdir=&prefix_dir.results/%sysfunc(compress(&design,_))\;
 %let subdir=reports\;
 %put &reportsdir;
 
@@ -573,4 +573,5 @@ goptions reset=all device=win;
 
 %mend;
 %make_details;
+
 
