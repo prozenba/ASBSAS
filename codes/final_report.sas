@@ -402,7 +402,7 @@ quit;
 
 
 
-/*na nowo tworzymy listê zmiennych &zmienne*/
+/*na nowo tworzymy listÃª zmiennych &zmienne*/
 proc sql noprint;
 select distinct upcase('WOE_'||trim(Variable)),
 quote(upcase(Variable)),
@@ -438,7 +438,7 @@ quit;
 
 
 
-/*skorowanie zbiorów*/
+/*skorowanie zbiorÃ³w*/
 data kar;
 set models.Scorecard_Scorecard&the_best_model(rename=(_variable_=variable));
 variable=upcase(variable);
@@ -987,7 +987,7 @@ run;
 
 
 
-goptions reset=all device=activex;
+goptions reset=all device=png;
 ods listing close;
 ods html path="&nodedir"(url=none) body='Report.html' contents='contents.html'
 frame='index.html' style=Statistical;
@@ -1488,4 +1488,5 @@ quit;
 
 ods html close;
 ods listing;
-goptions reset=all device=win;
+goptions reset=all device=png;
+
