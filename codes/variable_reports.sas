@@ -8,7 +8,7 @@
 
 
 options ls=256;
-options mprint;
+/* options mprint; */
 %let nr_cent=99;
 
 proc format;
@@ -573,6 +573,7 @@ goptions reset=all device=win;
 
 %mend;
 %make_details;
+
 
 
 
