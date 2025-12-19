@@ -369,7 +369,7 @@ run;
 %put &kat_kodowanie;
 %let zbior=abt;
 %let keep=&zmienne_grp &trzymaj;
-%include "&kat_kodowanie.\coding_code.sas";
+%include "&kat_kodowanie./coding_code.sas";
 /*data abt_woe;*/
 /*set abt_woe;*/
 /*if &tar in (.,.i,.d) then &tar=0;*/
@@ -573,3 +573,4 @@ goptions reset=all device=win;
 
 %mend;
 %make_details;
+
