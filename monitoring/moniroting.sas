@@ -7,7 +7,7 @@
 
 goptions reset=all;
 %let title=Example of quick and dirty model;
-%let dir_codes=/export/viya/homes/piotr.rozenbajgier@sgh.waw.pl/CS/monitoring/;
+%let dir_codes=&WORKSPACE_PATH./ASBSAS/monitoring/;
 
 %let time_dim=Year;
 %include "&dir_codes.makra.sas";
