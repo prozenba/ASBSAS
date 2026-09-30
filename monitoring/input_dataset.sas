@@ -8,17 +8,19 @@
 
 
 
-libname inlib "/export/viya/homes/piotr.rozenbajgier@sgh.waw.pl/CS/inlib/" compress=yes;
-libname out "/export/viya/homes/piotr.rozenbajgier@sgh.waw.pl/CS/monitoring/data/" compress=yes;
+libname inlib "&WORKSPACE_PATH./ASBSAS/inlib/" compress=yes;
+libname out "&WORKSPACE_PATH./ASBSAS/monitoring/data/" compress=yes;
+libname model "&WORKSPACE_PATH./ASBSAS/models/" compress=yes;
 
 
-%let dir_codes=%sysfunc(pathname(out));
+/* %let dir_codes=%sysfunc(pathname(out)); */
+%let dir_codes=&WORKSPACE_PATH./ASBSAS/out;
 
 proc sql noprint;
 select distinct _variable_,'GRP_'||trim(_variable_) 
 into :zmienne separated by ' ',
 :zmienne_grp separated by ' '
-from out.Scorecard_scorecard1;
+from model.Scorecard_scorecard1;
 quit;
 %put &zmienne;
 %put &zmienne_grp;
@@ -32,7 +34,7 @@ quit;
 %let sets=&in_abt;
 %put &sets;
 
-
+/* Please copy belo lines directly from main.sas */
 %macro Additional_variables;
 length app_IGJM $ 30;
 outstanding=app_loan_amount;
